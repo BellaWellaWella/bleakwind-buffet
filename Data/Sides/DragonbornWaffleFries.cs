@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Bella Goddard
+* Class name: DragonbornWaffleFries
+* Purpose: To create the model for the fries
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;

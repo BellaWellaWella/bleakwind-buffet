@@ -1,4 +1,9 @@
-﻿using BleakwindBuffet.Data.Enums;
+﻿/*
+* Author: Bella Goddard
+* Class name: MarkarthMilk
+* Purpose: To create the model for milk
+*/
+using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;

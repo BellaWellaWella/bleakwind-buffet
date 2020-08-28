@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Bella Goddard
+* Class name: DoubleDraugr
+* Purpose: To create the model for the Double Draugr
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

@@ -1,4 +1,10 @@
-﻿using BleakwindBuffet.Data.Enums;
+﻿/*
+* Author: Bella Goddard
+* Class name: CandlehearthCoffee
+* Purpose: To create the model for coffee
+*/
+
+using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;

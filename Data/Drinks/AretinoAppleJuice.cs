@@ -1,4 +1,13 @@
-﻿using BleakwindBuffet.Data.Enums;
+﻿
+/*
+* Author: Bella Goddard
+* Class name: AretinoAppleJuice
+* Purpose: To create the model for Aretino Apple Juice
+*/
+
+
+
+using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;

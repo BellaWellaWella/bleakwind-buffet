@@ -1,4 +1,9 @@
-﻿using BleakwindBuffet.Data.Enums;
+﻿/*
+* Author: Bella Goddard
+* Class name: SailorsSoda
+* Purpose: To create the model for soda
+*/
+using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;

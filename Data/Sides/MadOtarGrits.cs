@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Bella Goddard
+* Class name: MadOtarGrits
+* Purpose: To create the model for grits
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;

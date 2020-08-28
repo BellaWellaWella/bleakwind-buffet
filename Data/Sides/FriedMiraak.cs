@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Bella Goddard
+* Class name: AretinoAppleJuice
+* Purpose: To create the model for Fried Miraak
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;

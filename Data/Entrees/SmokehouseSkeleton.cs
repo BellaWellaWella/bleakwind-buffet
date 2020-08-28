@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Bella Goddard
+* Class name: SmokehouseSkeleton
+* Purpose: To create the model for the smokehouse skeleton
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Bella Goddard
+* Class name: ThugsT-Bone
+* Purpose: To create the model for the t-bone
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Bella Goddard
+* Class name: ThalmorTriple
+* Purpose: To create the model for the Thalmor Triple
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

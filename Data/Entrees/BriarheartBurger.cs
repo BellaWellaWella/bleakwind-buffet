@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Bella Goddard
+* Class name: BriarheartBurger
+* Purpose: To create the model for the Briarheart Burger
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

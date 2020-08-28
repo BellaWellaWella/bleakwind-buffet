@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Bella Goddard
+* Class name: GardenOrcOmlette
+* Purpose: To create the model for the omelette
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

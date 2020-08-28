@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Bella Goddard
+* Class name: PhillyPoacher
+* Purpose: To create the model for the philly poacher
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 
