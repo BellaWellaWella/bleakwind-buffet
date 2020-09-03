@@ -1,6 +1,6 @@
 ﻿/*
 * Author: Bella Goddard
-* Class name: ThugsT-Bone
+* Class name: ThugsTBone
 * Purpose: To create the model for the t-bone
 */
 using System;
@@ -9,7 +9,7 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    public class ThugsT_Bone
+    public class ThugsTBone
     {
         /// <summary>
         /// Gets the Price of the t-bone

@@ -1,6 +1,6 @@
 ﻿/*
 * Author: Bella Goddard
-* Class name: SailorsSoda
+* Class name: SailorSoda
 * Purpose: To create the model for soda
 */
 using BleakwindBuffet.Data.Enums;
@@ -10,7 +10,7 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class SailorsSoda
+    public class SailorSoda
     {
         private Size size = Size.Small;
 
