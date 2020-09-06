@@ -9,21 +9,24 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// A class that represents the entree, Thugs T-Bone
+    /// </summary>
     public class ThugsTBone
     {
-        /// <summary>
+        /// <value>
         /// Gets the Price of the t-bone
-        /// </summary>
+        /// </value>
         public double Price => 6.44;
 
-        /// <summary>
+        /// <value>
         /// gets the calories of the t-bone
-        /// </summary>
+        /// </value>
         public uint Calories => 982;
 
-        /// <summary>
+        /// <value>
         /// sets up the special instructions
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get

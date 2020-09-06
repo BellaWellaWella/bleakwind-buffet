@@ -10,13 +10,19 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
+    /// <summary>
+    /// A class that represents the drink Markarth Milk
+    /// </summary>
     public class MarkarthMilk
     {
+        /// <value>
+        /// A private backing variable for size
+        /// </value>
         private Size size = Size.Small;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the size preference
-        /// </summary>
+        /// </value>
         public Size Size
         {
             get
@@ -30,15 +36,15 @@ namespace BleakwindBuffet.Data.Drinks
         }
 
 
-       
-        /// <summary>
+
+        /// <value>
         /// gets & sets the ice preference
-        /// </summary>
+        /// </value>
         public bool Ice { get; set; } = false;
 
-        /// <summary>
+        /// <value>
         /// gives the calories based on size
-        /// </summary>
+        /// </value>
         public uint Calories
         {
             get
@@ -64,22 +70,22 @@ namespace BleakwindBuffet.Data.Drinks
 
         }
 
-        /// <summary>
+        /// <value>
         /// gives the price based on size
-        /// </summary>
+        /// </value>
         public double Price
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     return 1.05;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     return 1.11;
                 }
-                else if (size == Size.Large)
+                else if (Size == Size.Large)
                 {
                     return 1.22;
                 }
@@ -90,9 +96,9 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
-        /// <summary>
+        /// <value>
         /// sets up the special instructions
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get
@@ -111,7 +117,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns> the new string </returns>
         public override string ToString()
         {
-            return (size.ToString()  + " Markarth Milk");
+            return (Size.ToString()  + " Markarth Milk");
         }
     }
 }

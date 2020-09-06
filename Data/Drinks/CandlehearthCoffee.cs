@@ -11,13 +11,19 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
+    /// <summary>
+    /// A class that represents the drink, Candlehearth coffee
+    /// </summary>
     public class CandlehearthCoffee
     {
+        /// <value>
+        /// A private backing variable for size
+        /// </value>
         private Size size = Size.Small;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the size preference
-        /// </summary>
+        /// </value>
         public Size Size
         {
             get
@@ -32,24 +38,24 @@ namespace BleakwindBuffet.Data.Drinks
 
 
 
-        /// <summary>
+        /// <value>
         /// gets & sets the ice preference
-        /// </summary>
+        /// </value>
         public bool Ice { get; set; } = false;
-        
-        /// <summary>
+
+        /// <value>
         /// gets & sets the room for cream preference
-        /// </summary>
+        /// </value>
         public bool RoomForCream { get; set; } = false;
-        
-        /// <summary>
+
+        /// <value>
         /// gets & sets the decaf preference
-        /// </summary>
+        /// </value>
         public bool Decaf { get; set; } = false;
 
-        /// <summary>
+        /// <value>
         /// gives the calories based on size
-        /// </summary>
+        /// </value>
         public uint Calories
         {
             get
@@ -75,9 +81,9 @@ namespace BleakwindBuffet.Data.Drinks
 
         }
 
-        /// <summary>
+        /// <value>
         /// gives the price based on size
-        /// </summary>
+        /// </value>
         public double Price
         {
             get
@@ -101,9 +107,9 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
-        /// <summary>
+        /// <value>
         /// sets up the special instructions
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get

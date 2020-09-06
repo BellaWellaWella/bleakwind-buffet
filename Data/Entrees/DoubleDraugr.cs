@@ -9,61 +9,64 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// A class that represents the entree, Double Draugr
+    /// </summary>
     public class DoubleDraugr
     {
-        /// <summary>
+        /// <value>
         /// Gets the Price of the burger
-        /// </summary>
+        /// </value>
         public double Price => 7.32;
 
-        /// <summary>
+        /// <value>
         /// gets the calories of the burger
-        /// </summary>
+        /// </value>
         public uint Calories => 843;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the ketchup preference
-        /// </summary>
+        /// </value>
         public bool Ketchup { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets &sets the bun preference
-        /// </summary>
+        /// </value>
         public bool Bun { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the mustard preference
-        /// </summary>
+        /// </value>
         public bool Mustard { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the pickle preference
-        /// </summary>
+        /// </value>
         public bool Pickle { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the cheese preference
-        /// </summary>
+        /// </value>
         public bool Cheese { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the tomato preference
-        /// </summary>
+        /// </value>
         public bool Tomato { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the lettuce preference
-        /// </summary>
+        /// </value>
         public bool Lettuce { get; set; } = true;
-        
-        /// <summary>
+
+        /// <value>
         /// gets & sets the mayo preference
-        /// </summary>
+        /// </value>
         public bool Mayo { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// sets up the special instructions
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get

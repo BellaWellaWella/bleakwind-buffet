@@ -9,6 +9,9 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Enums
 {
+    /// <summary>
+    /// An enum that gives the Soda Flavor possibilities
+    /// </summary>
     public enum SodaFlavor
     {
         Blackberry, 

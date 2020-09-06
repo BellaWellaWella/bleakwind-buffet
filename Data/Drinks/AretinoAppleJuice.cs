@@ -14,13 +14,19 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
+    /// <summary>
+    /// A Class that represents the drink, Aretino Apple Juice
+    /// </summary>
     public class AretinoAppleJuice
     {
+        /// <value>
+        /// private backing variable for size
+        /// </value>
         private Size size = Size.Small;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the size preference
-        /// </summary>
+        /// </value>
         public Size Size
         {
             get
@@ -35,14 +41,14 @@ namespace BleakwindBuffet.Data.Drinks
 
 
 
-        /// <summary>
+        /// <value>
         /// gets & sets the ice preference
-        /// </summary>
+        /// </value>
         public bool Ice { get; set; } = false;
 
-        /// <summary>
+        /// <value>
         /// gives the calories based on size
-        /// </summary>
+        /// </value>
         public uint Calories
         {
             get
@@ -68,9 +74,9 @@ namespace BleakwindBuffet.Data.Drinks
 
         }
 
-        /// <summary>
+        /// <value>
         /// gives the price based on size
-        /// </summary>
+        /// </value>
         public double Price
         {
             get

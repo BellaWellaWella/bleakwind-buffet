@@ -9,46 +9,49 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// A class that represents the entree, Briarheart burger
+    /// </summary>
     public class BriarheartBurger
     {
-        /// <summary>
+        /// <value>
         /// Gets the Price of the burger
-        /// </summary>
+        /// </value>
         public double Price => 6.32;
 
-        /// <summary>
+        /// <value>
         /// gets the calories of the burger
-        /// </summary>
+        /// </value>
         public uint Calories => 743;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the ketchup preference
-        /// </summary>
+        /// </value>
         public bool Ketchup { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets &sets the bun preference
-        /// </summary>
+        /// </value>
         public bool Bun { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the mustard preference
-        /// </summary>
+        /// </value>
         public bool Mustard { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the pickle preference
-        /// </summary>
+        /// </value>
         public bool Pickle { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the cheese preference
-        /// </summary>
+        /// </value>
         public bool Cheese { get; set; } = true;
-        
-        /// <summary>
+
+        /// <value>
         /// sets up the special instructions
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get

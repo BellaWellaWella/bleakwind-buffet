@@ -9,42 +9,45 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// A class representing the entree, Garden Orc Omlette
+    /// </summary>
     public class GardenOrcOmelette
     {
-        /// <summary>
+        /// <value>
         /// Gets the Price of the omelette
-        /// </summary>
+        /// </value>
         public double Price => 4.57;
 
-        /// <summary>
+        /// <value>
         /// gets the calories of the omelette
-        /// </summary>
+        /// </value>
         public uint Calories => 404;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the broccoli preference
-        /// </summary>
+        /// </value>
         public bool Broccoli { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the mushroom preference
-        /// </summary>
+        /// </value>
         public bool Mushrooms { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the tomato preference
-        /// </summary>
+        /// </value>
         public bool Tomato { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the cheddar preference
-        /// </summary>
+        /// </value>
         public bool Cheddar { get; set; } = true;
 
 
-        /// <summary>
+        /// <value>
         /// sets up the special instructions
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get

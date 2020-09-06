@@ -10,10 +10,19 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
+    /// <summary>
+    /// A class that represents the drink sailor soda
+    /// </summary>
     public class SailorSoda
     {
+        /// <value>
+        /// A private backing variable for size
+        /// </value>
         private Size size = Size.Small;
 
+        /// <value>
+        /// a get & set for the size property
+        /// </value>
         public Size Size
         {
             get
@@ -27,10 +36,10 @@ namespace BleakwindBuffet.Data.Drinks
         }
 
 
-        /// <summary>
+        /// <value>
         /// gets & sets the flavor preference
-        /// </summary>
-        private SodaFlavor flavor = Enums.SodaFlavor.Cherry;
+        /// </value>
+        private SodaFlavor flavor = SodaFlavor.Cherry;
         public SodaFlavor Flavor
         {
             get { return flavor; }
@@ -38,11 +47,14 @@ namespace BleakwindBuffet.Data.Drinks
             set { flavor = value; }
         }
 
-        /// <summary>
+        /// <value>
         /// gets & sets the ice preference
-        /// </summary>
+        /// </value>
         public bool Ice { get; set; } = true;
 
+        /// <value>
+        /// gets & sets the calorie property
+        /// </value>
         public uint Calories
         {
             get
@@ -68,6 +80,9 @@ namespace BleakwindBuffet.Data.Drinks
 
         }
 
+        /// <value>
+        /// gets & sets the price property
+        /// </value>
         public double Price
         {
             get
@@ -91,9 +106,9 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
-        /// <summary>
+        /// <value>
         /// sets up the special instructions
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get
@@ -112,7 +127,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns> the new string </returns>
         public override string ToString()
         {
-            return (size.ToString() + flavor.ToString()+ " Sailor Soda");
+            return Size.ToString() + " "+ Flavor.ToString() + " Sailor Soda";
         }
 
     }

@@ -9,71 +9,74 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// A class that represents the entree, Thlmor Triple
+    /// </summary>
     public class ThalmorTriple
     {
-        /// <summary>
+        /// <value>
         /// Gets the Price of the burger
-        /// </summary>
+        /// </value>
         public double Price => 8.32;
 
-        /// <summary>
+        /// <value>
         /// gets the calories of the burger
-        /// </summary>
+        /// </value>
         public uint Calories => 943;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the ketchup preference
-        /// </summary>
+        /// </value>
         public bool Ketchup { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets &sets the bun preference
-        /// </summary>
+        /// </value>
         public bool Bun { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the mustard preference
-        /// </summary>
+        /// </value>
         public bool Mustard { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the pickle preference
-        /// </summary>
+        /// </value>
         public bool Pickle { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the cheese preference
-        /// </summary>
+        /// </value>
         public bool Cheese { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the tomato preference
-        /// </summary>
+        /// </value>
         public bool Tomato { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the lettuce preference
-        /// </summary>
+        /// </value>
         public bool Lettuce { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the mayo preference
-        /// </summary>
+        /// </value>
         public bool Mayo { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the bacon preference
-        /// </summary>
+        /// </value>
         public bool Bacon { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the egg preference
-        /// </summary>
+        /// </value>
         public bool Egg { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// sets up the special instructions
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get

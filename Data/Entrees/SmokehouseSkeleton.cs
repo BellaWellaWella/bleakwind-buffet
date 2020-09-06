@@ -9,42 +9,45 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// A class that represennts the entree, Smokehouse Skeleton
+    /// </summary>
     public class SmokehouseSkeleton
     {
-        /// <summary>
+        /// <value>
         /// Gets the Price of the dish
-        /// </summary>
+        /// </value>
         public double Price => 5.62;
 
-        /// <summary>
+        /// <value>
         /// gets the calories of the dish
-        /// </summary>
+        /// </value>
         public uint Calories => 602;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the sausage preference
-        /// </summary>
+        /// </value>
         public bool SausageLink { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the egg preference
-        /// </summary>
+        /// </value>
         public bool Egg { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the hash browns preference
-        /// </summary>
+        /// </value>
         public bool HashBrowns { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the pancake preference
-        /// </summary>
+        /// </value>
         public bool Pancake { get; set; } = true;
 
-       
-        /// <summary>
+
+        /// <value>
         /// sets up the special instructions
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get

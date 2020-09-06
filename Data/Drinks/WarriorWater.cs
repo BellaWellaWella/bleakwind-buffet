@@ -10,11 +10,21 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
+    /// <summary>
+    /// A class to represent the drink warrior water
+    /// </summary>
     public class WarriorWater
     {
-        private double price = 0.00;
+
+        //private double price = 0.00;
+        /// <value>
+        /// A private backing variable for size
+        /// </value>
         private Size size = Size.Small;
 
+        /// <value>
+        /// A get & set for size
+        /// </value>
         public Size Size
         {
             get
@@ -28,16 +38,19 @@ namespace BleakwindBuffet.Data.Drinks
         }
 
 
-        /// <summary>
+        /// <value>
         /// gets & sets the Lemon preference
-        /// </summary>
+        /// </value>
         public bool Lemon { get; set; } = false;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the ice preference
-        /// </summary>
+        /// </value>
         public bool Ice { get; set; } = true;
 
+        /// <value>
+        /// Gets & sets the calories property
+        /// </value>
         public uint Calories
         {
             get
@@ -62,7 +75,10 @@ namespace BleakwindBuffet.Data.Drinks
         
         
         }
-        
+
+        /// <value>
+        /// Gets & sets the price property
+        /// </value>
         public double Price
         {
             get
@@ -86,9 +102,9 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
-        /// <summary>
+        /// <value>
         /// sets up the special instructions
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get
@@ -108,7 +124,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns> the new string </returns>
         public override string ToString()
         {
-            return (size.ToString() + "Warrior Water");
+            return (size.ToString() + " Warrior Water");
         }
     }
 }

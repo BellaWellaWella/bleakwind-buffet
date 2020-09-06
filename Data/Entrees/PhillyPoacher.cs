@@ -9,44 +9,47 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// A class representing the entree, Philly poacher
+    /// </summary>
     public class PhillyPoacher
     {
-        /// <summary>
+        /// <value>
         /// Gets the Price of the burger
-        /// </summary>
+        /// </value>
         public double Price => 7.23;
 
-        /// <summary>
+        /// <value>
         /// gets the calories of the burger
-        /// </summary>
+        /// </value>
         public uint Calories => 784;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the sausage preference
-        /// </summary>
+        /// </value>
         public bool Sirloin { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the egg preference
-        /// </summary>
+        /// </value>
         public bool Onion { get; set; } = true;
 
-        /// <summary>
+        /// <value>
         /// gets & sets the hash browns preference
-        /// </summary>
+        /// </value>
         public bool Roll { get; set; } = true;
 
 
-        /// <summary>
+        /// <value>
         /// sets up the special instructions
-        /// </summary>
+        /// </value>
         public List<string> SpecialInstructions
         {
             get
             {
                 List<string> instructions = new List<string>();
-                if (!Sirloin) instructions.Add("Hold sirloin.");
-                if (!Onion) instructions.Add("Hold onions.");
+                if (!Sirloin) instructions.Add("Hold sirloin");
+                if (!Onion) instructions.Add("Hold onions");
                 if (!Roll) instructions.Add("Hold roll");
                 return instructions;
             }
