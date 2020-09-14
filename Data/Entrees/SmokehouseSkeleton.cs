@@ -12,17 +12,17 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// A class that represennts the entree, Smokehouse Skeleton
     /// </summary>
-    public class SmokehouseSkeleton
+    public class SmokehouseSkeleton : Entree
     {
         /// <value>
         /// Gets the Price of the dish
         /// </value>
-        public double Price => 5.62;
+        public override double Price => 5.62;
 
         /// <value>
         /// gets the calories of the dish
         /// </value>
-        public uint Calories => 602;
+        public override uint Calories => 602;
 
         /// <value>
         /// gets & sets the sausage preference
@@ -48,7 +48,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <value>
         /// sets up the special instructions
         /// </value>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

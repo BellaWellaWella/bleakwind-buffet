@@ -12,17 +12,17 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// A class that represents the entree, Double Draugr
     /// </summary>
-    public class DoubleDraugr
+    public class DoubleDraugr : Entree
     {
         /// <value>
         /// Gets the Price of the burger
         /// </value>
-        public double Price => 7.32;
+        public override double Price => 7.32;
 
         /// <value>
         /// gets the calories of the burger
         /// </value>
-        public uint Calories => 843;
+        public override uint Calories => 843;
 
         /// <value>
         /// gets & sets the ketchup preference
@@ -67,7 +67,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <value>
         /// sets up the special instructions
         /// </value>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

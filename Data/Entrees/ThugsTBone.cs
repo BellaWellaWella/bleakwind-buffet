@@ -12,22 +12,22 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// A class that represents the entree, Thugs T-Bone
     /// </summary>
-    public class ThugsTBone
+    public class ThugsTBone : Entree
     {
         /// <value>
         /// Gets the Price of the t-bone
         /// </value>
-        public double Price => 6.44;
+        public override double Price => 6.44;
 
         /// <value>
         /// gets the calories of the t-bone
         /// </value>
-        public uint Calories => 982;
+        public override uint Calories => 982;
 
         /// <value>
         /// sets up the special instructions
         /// </value>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

@@ -14,27 +14,8 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// A class that represents the drink, Candlehearth coffee
     /// </summary>
-    public class CandlehearthCoffee
+    public class CandlehearthCoffee : Drink
     {
-        /// <value>
-        /// A private backing variable for size
-        /// </value>
-        private Size size = Size.Small;
-
-        /// <value>
-        /// gets & sets the size preference
-        /// </value>
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
 
 
 
@@ -56,19 +37,19 @@ namespace BleakwindBuffet.Data.Drinks
         /// <value>
         /// gives the calories based on size
         /// </value>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     return 7;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     return 10;
                 }
-                else if (size == Size.Large)
+                else if (Size == Size.Large)
                 {
                     return 20;
                 }
@@ -84,19 +65,19 @@ namespace BleakwindBuffet.Data.Drinks
         /// <value>
         /// gives the price based on size
         /// </value>
-        public double Price
+        public override double Price
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     return .75;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     return 1.25;
                 }
-                else if (size == Size.Large)
+                else if (Size == Size.Large)
                 {
                     return 1.75;
                 }
@@ -110,7 +91,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <value>
         /// sets up the special instructions
         /// </value>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
@@ -130,9 +111,9 @@ namespace BleakwindBuffet.Data.Drinks
         public override string ToString()
         {
             if(!Decaf)
-                return (size.ToString() + " Candlehearth Coffee");
+                return (Size.ToString() + " Candlehearth Coffee");
             else
-                return (size.ToString() + " Decaf Candlehearth Coffee");
+                return (Size.ToString() + " Decaf Candlehearth Coffee");
         }
     }
 }

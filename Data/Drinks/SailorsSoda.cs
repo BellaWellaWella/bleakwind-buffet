@@ -13,29 +13,9 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// A class that represents the drink sailor soda
     /// </summary>
-    public class SailorSoda
+    public class SailorSoda : Drink
     {
-        /// <value>
-        /// A private backing variable for size
-        /// </value>
-        private Size size = Size.Small;
-
-        /// <value>
-        /// a get & set for the size property
-        /// </value>
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
-
-
+      
         /// <value>
         /// gets & sets the flavor preference
         /// </value>
@@ -55,19 +35,19 @@ namespace BleakwindBuffet.Data.Drinks
         /// <value>
         /// gets & sets the calorie property
         /// </value>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     return 117;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     return 153;
                 }
-                else if (size == Size.Large)
+                else if (Size == Size.Large)
                 {
                     return 205;
                 }
@@ -83,19 +63,19 @@ namespace BleakwindBuffet.Data.Drinks
         /// <value>
         /// gets & sets the price property
         /// </value>
-        public double Price
+        public override double Price
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     return 1.42;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     return 1.74;
                 }
-                else if (size == Size.Large)
+                else if (Size == Size.Large)
                 {
                     return 2.07;
                 }
@@ -109,7 +89,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <value>
         /// sets up the special instructions
         /// </value>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
@@ -127,7 +107,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns> the new string </returns>
         public override string ToString()
         {
-            return Size.ToString() + " "+ Flavor.ToString() + " Sailor Soda";
+            return (Size.ToString() + " "+ Flavor.ToString() + " Sailor Soda");
         }
 
     }

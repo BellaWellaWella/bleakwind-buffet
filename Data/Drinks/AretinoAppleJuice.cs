@@ -17,29 +17,8 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// A Class that represents the drink, Aretino Apple Juice
     /// </summary>
-    public class AretinoAppleJuice
+    public class AretinoAppleJuice : Drink
     {
-        /// <value>
-        /// private backing variable for size
-        /// </value>
-        private Size size = Size.Small;
-
-        /// <value>
-        /// gets & sets the size preference
-        /// </value>
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
-
-
 
         /// <value>
         /// gets & sets the ice preference
@@ -49,19 +28,19 @@ namespace BleakwindBuffet.Data.Drinks
         /// <value>
         /// gives the calories based on size
         /// </value>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     return 44;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     return 88;
                 }
-                else if (size == Size.Large)
+                else if (Size == Size.Large)
                 {
                     return 132;
                 }
@@ -77,19 +56,19 @@ namespace BleakwindBuffet.Data.Drinks
         /// <value>
         /// gives the price based on size
         /// </value>
-        public double Price
+        public override double Price
         {
             get
             {
-                if (size == Size.Small)
+                if (Size == Size.Small)
                 {
                     return .62;
                 }
-                else if (size == Size.Medium)
+                else if (Size == Size.Medium)
                 {
                     return .87;
                 }
-                else if (size == Size.Large)
+                else if (Size == Size.Large)
                 {
                     return 1.01;
                 }
@@ -103,7 +82,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// sets up the special instructions
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
@@ -121,7 +100,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns> the new string </returns>
         public override string ToString()
         {
-            return (size.ToString() + " Aretino Apple Juice");
+            return (Size.ToString() + " Aretino Apple Juice");
         }
     }
 }
