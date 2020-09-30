@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="PointOfSale.MenuChooser"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" IsEnabled="True" Name="BriarheartBurgerButton" Content="Briarheart Burger" FontSize="20" Click="BriarheartBurgerButton_Click" Background="MintCream">
+        </Button>
+        <Button Grid.Row="1" IsEnabled="True" Name="DoubleDraugrButton" Content="Double Draugr" FontSize="20" Background="MintCream" Click="DoubleDraugrButton_Click">
+        </Button>
+        <Button Grid.Row="2" IsEnabled="True" Name="ThalmorTripleButton" Content="Thalmor Triple" FontSize="20" Background="MintCream" Click="ThalmorTripleButton_Click">
+        </Button>
+        <Button Grid.Row="3" IsEnabled="True" Name="GardenOrcOmeletteButton" Content="Garden Orc Omelette" FontSize="17" Background="MintCream" Click="GardenOrcOmeletteButton_Click">
+        </Button>
+        <Button Grid.Row="4" IsEnabled="True" Name="PhillyPoacherButton" Content="Philly Poacher" FontSize="20" Background="MintCream" Click="PhillyPoacherButton_Click">
+        </Button>
+        <Button Grid.Row="5" IsEnabled="True" Name="SmokehouseSkeletonButton" Content="Smokehouse Skeleton" FontSize="17" Background="MintCream" Click="SmokehouseSkeletonButton_Click">
+        </Button>
+        <Button Grid.Row="6" IsEnabled="True" Name="ThugsTBoneButton" Content="Thugs T-Bone" FontSize="20" Background="MintCream" Click="ThugsTBoneButton_Click">
+        </Button>
+
+        <Button Grid.Row="0" Grid.Column="1" IsEnabled="True" Name="DragonbornWaffleFriesButton" Content="Dragonborn Waffle Fries" FontSize="17" Background="MintCream" Height="86" Grid.RowSpan="2" VerticalAlignment="Top" Click="DragonbornWaffleFriesButton_Click">
+        </Button>
+        <Button Grid.Row="1" Grid.Column="1" IsEnabled="True" Name="FriedMirrakButton" Content="Fried Mirrak" FontSize="20" Background="MintCream" Click="FriedMirrakButton_Click">
+        </Button>
+        <Button Grid.Row="2" Grid.Column="1" IsEnabled="True" Name="MadOtarGritsButton" Content="Mad Otar Grits" FontSize="20" Background="MintCream" Click="MadOtarGritsButton_Click">
+        </Button>
+        <Button Grid.Row="3" Grid.Column="1" IsEnabled="True" Name="VokunSaladButton" Content="Vokun Salad" FontSize="20"  Background="MintCream" Click="VokunSaladButton_Click">
+        </Button>
+
+        <Button Grid.Row="0" Grid.Column="2" IsEnabled="True" Name="AretinoAppleJuiceButton" Content="Aretino Apple Juice" FontSize="20" Background="MintCream" Click="AretinoAppleJuiceButton_Click">
+        </Button>
+        <Button Grid.Row="1" Grid.Column="2" IsEnabled="True" Name="CandlehearthCoffeeButton" Content="Candlehearth Coffee" FontSize="20" Background="MintCream" Click="CandlehearthCoffeeButton_Click">
+        </Button>
+        <Button Grid.Row="2" Grid.Column="2" IsEnabled="True" Name="MarkarthMilkButton" Content="Markarth Milk" FontSize="20" Background="MintCream" Click="MarkarthMilkButton_Click">
+        </Button>
+        <Button Grid.Row="2" Grid.Column="2" IsEnabled="True" Name="SailorsSodaButton" Content="Sailor's Soda" FontSize="20" Background="MintCream" Height="86" Margin="0,86,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Click="SailorsSodaButton_Click">
+        </Button>
+        <Button Grid.Row="4" Grid.Column="2" IsEnabled="True" Name="WarriorWaterButton" Content="Warrior Water" FontSize="20" Background="MintCream" Click="WarriorWaterButton_Click">
+        </Button>
+
+        <Button Grid.Row="6" Grid.Column="2" IsEnabled="True" Name="ClearButton" Content="Clear" FontSize="20" Background="PaleVioletRed">
+        </Button>
+        <Button Grid.Row="6" Grid.Column="1" IsEnabled="True" Name="CheckoutButton" Content="Checkout" FontSize="20" Background="LawnGreen">
+        </Button>
+    </Grid>
+</UserControl>
