@@ -6,14 +6,30 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace BleakwindBuffet.Data.Entrees
 {
     /// <summary>
     /// A class that represennts the entree, Smokehouse Skeleton
     /// </summary>
-    public class SmokehouseSkeleton : Entree
+    public class SmokehouseSkeleton : Entree, INotifyPropertyChanged 
     {
+        /// <summary>
+        /// Declaring the event handler for PropertyChanged
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// method for when the property changes
+        /// </summary>
+        /// <param name="propertyName"></param>
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         /// <value>
         /// Gets the Price of the dish
         /// </value>
@@ -24,25 +40,61 @@ namespace BleakwindBuffet.Data.Entrees
         /// </value>
         public override uint Calories => 602;
 
+        private bool sausageLink = true;
         /// <value>
-        /// gets & sets the sausage preference
+        /// gets & sets the sausage link preference
         /// </value>
-        public bool SausageLink { get; set; } = true;
+        public bool SausageLink
+        {
+            get { return sausageLink; }
+            set
+            {
+                sausageLink = value;
+                OnPropertyChanged("SausageLink");
+            }
+        }
 
+        private bool egg = true;
         /// <value>
         /// gets & sets the egg preference
         /// </value>
-        public bool Egg { get; set; } = true;
+        public bool Egg
+        {
+            get { return egg; }
+            set
+            {
+                egg = value;
+                OnPropertyChanged("Egg");
+            }
+        }
 
+        private bool hashBrowns = true;
         /// <value>
         /// gets & sets the hash browns preference
         /// </value>
-        public bool HashBrowns { get; set; } = true;
+        public bool HashBrowns
+        {
+            get { return hashBrowns; }
+            set
+            {
+                hashBrowns = value;
+                OnPropertyChanged("HashBrowns");
+            }
+        }
 
+        private bool pancake = true;
         /// <value>
-        /// gets & sets the pancake preference
+        /// gets & sets the sirloin preference
         /// </value>
-        public bool Pancake { get; set; } = true;
+        public bool Pancake
+        {
+            get { return pancake; }
+            set
+            {
+                pancake = value;
+                OnPropertyChanged("Pancake");
+            }
+        }
 
 
         /// <value>

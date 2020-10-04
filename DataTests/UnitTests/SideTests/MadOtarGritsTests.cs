@@ -9,11 +9,88 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Sides;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class MadOtarGritsTests
     {
+        [Fact]
+        public void ShouldBeAIPropChangedItem()
+        {
+            MadOtarGrits mo = new MadOtarGrits();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(mo);
+        }
+
+
+        [Fact]
+        public void ChangingSizeNotifiesSizeProperty()
+        {
+            var mo = new MadOtarGrits();
+
+            Assert.PropertyChanged(mo, "Size", () =>
+            {
+                mo.Size = Size.Large;
+            });
+
+            Assert.PropertyChanged(mo, "Size", () =>
+            {
+                mo.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(mo, "Size", () =>
+            {
+                mo.Size = Size.Small;
+            });
+        }
+
+        [Fact]
+        public void ChangingSizeNotifiesCalProperty()
+        {
+            var mo = new MadOtarGrits();
+
+            Assert.PropertyChanged(mo, "Size", () =>
+            {
+                mo.Size = Size.Large;
+                mo.Calories.Equals(179);
+            });
+
+            Assert.PropertyChanged(mo, "Size", () =>
+            {
+                mo.Size = Size.Medium;
+                mo.Calories.Equals(142);
+
+            });
+            Assert.PropertyChanged(mo, "Size", () =>
+            {
+                mo.Size = Size.Small;
+                mo.Calories.Equals(105);
+            });
+        }
+
+        [Fact]
+        public void ChangingSizeNotifiesPriceProperty()
+        {
+            var mo = new MadOtarGrits();
+
+            Assert.PropertyChanged(mo, "Size", () =>
+            {
+                mo.Size = Size.Large;
+                mo.Price.Equals(1.93);
+            });
+
+            Assert.PropertyChanged(mo, "Size", () =>
+            {
+                mo.Size = Size.Medium;
+                mo.Price.Equals(1.58);
+
+            });
+            Assert.PropertyChanged(mo, "Size", () =>
+            {
+                mo.Size = Size.Small;
+                mo.Price.Equals(1.22);
+            });
+        }
+
         [Fact]
         public void ShouldBeASide()
         {

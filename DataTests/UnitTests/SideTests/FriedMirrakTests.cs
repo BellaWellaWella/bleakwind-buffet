@@ -9,11 +9,88 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Sides;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class FriedMiraakTests
     {
+        [Fact]
+        public void ShouldBeAIPropChangedItem()
+        {
+            FriedMiraak fm = new FriedMiraak();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(fm);
+        }
+
+
+        [Fact]
+        public void ChangingSizeNotifiesSizeProperty()
+        {
+            var fm = new FriedMiraak();
+
+            Assert.PropertyChanged(fm, "Size", () =>
+            {
+                fm.Size = Size.Large;
+            });
+
+            Assert.PropertyChanged(fm, "Size", () =>
+            {
+                fm.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(fm, "Size", () =>
+            {
+                fm.Size = Size.Small;
+            });
+        }
+
+        [Fact]
+        public void ChangingSizeNotifiesCalProperty()
+        {
+            var fm = new FriedMiraak();
+
+            Assert.PropertyChanged(fm, "Size", () =>
+            {
+                fm.Size = Size.Large;
+                fm.Calories.Equals(306);
+            });
+
+            Assert.PropertyChanged(fm, "Size", () =>
+            {
+                fm.Size = Size.Medium;
+                fm.Calories.Equals(236);
+
+            });
+            Assert.PropertyChanged(fm, "Size", () =>
+            {
+                fm.Size = Size.Small;
+                fm.Calories.Equals(151);
+            });
+        }
+
+        [Fact]
+        public void ChangingSizeNotifiesPriceProperty()
+        {
+            var fm = new FriedMiraak();
+
+            Assert.PropertyChanged(fm, "Size", () =>
+            {
+                fm.Size = Size.Large;
+                fm.Price.Equals(2.88);
+            });
+
+            Assert.PropertyChanged(fm, "Size", () =>
+            {
+                fm.Size = Size.Medium;
+                fm.Price.Equals(2.01);
+
+            });
+            Assert.PropertyChanged(fm, "Size", () =>
+            {
+                fm.Size = Size.Small;
+                fm.Price.Equals(1.78);
+            });
+        }
+
         [Fact]
         public void ShouldBeASide()
         {

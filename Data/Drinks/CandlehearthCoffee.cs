@@ -8,31 +8,92 @@ using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// A class that represents the drink, Candlehearth coffee
     /// </summary>
-    public class CandlehearthCoffee : Drink
+    public class CandlehearthCoffee : Drink, INotifyPropertyChanged
     {
 
+        /// <summary>
+        /// Declaring the event handler for PropertyChanged
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// method to handle property change
+        /// </summary>
+        /// <param name="propertyName">the property that is being changed</param>
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        /// <summary>
+        /// private backing variable for size
+        /// </summary>
+        private Size size;
+
+        /// <summary>
+        /// gets & sets the size preference
+        /// </summary>
+        public override Size Size
+        {
+            get { return size; }
+            set
+            {
+                size = value;
+                OnPropertyChanged("Calories");
+                OnPropertyChanged("Price");
+                OnPropertyChanged("Size");
+
+            }
+        }
 
 
         /// <value>
         /// gets & sets the ice preference
         /// </value>
-        public bool Ice { get; set; } = false;
 
-        /// <value>
-        /// gets & sets the room for cream preference
-        /// </value>
-        public bool RoomForCream { get; set; } = false;
+        private bool ice = false;
 
-        /// <value>
-        /// gets & sets the decaf preference
-        /// </value>
-        public bool Decaf { get; set; } = false;
+        public bool Ice
+        {
+            get { return ice; }
+            set
+            {
+                ice = value;
+                OnPropertyChanged("Ice");
+
+            }
+        }
+
+        private bool roomForCream = false;
+
+        public bool RoomForCream
+        {
+            get { return roomForCream; }
+            set { roomForCream = value;
+                OnPropertyChanged("RoomForCream");
+            }
+        }
+
+        private bool decaf = false;
+
+        public bool Decaf
+        {
+            get { return decaf; }
+            set
+            {
+                decaf = value;
+                OnPropertyChanged("Decaf");
+            }
+        }
+
 
         /// <value>
         /// gives the calories based on size

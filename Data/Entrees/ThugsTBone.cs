@@ -6,14 +6,30 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace BleakwindBuffet.Data.Entrees
 {
     /// <summary>
     /// A class that represents the entree, Thugs T-Bone
     /// </summary>
-    public class ThugsTBone : Entree
+    public class ThugsTBone : Entree, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Declaring the event handler for PropertyChanged
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// method for when the property changes
+        /// </summary>
+        /// <param name="propertyName"></param>
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         /// <value>
         /// Gets the Price of the t-bone
         /// </value>

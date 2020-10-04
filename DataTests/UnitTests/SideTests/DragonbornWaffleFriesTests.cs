@@ -9,11 +9,88 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Sides;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class DragonbornWaffleFriesTests
     {
+        [Fact]
+        public void ShouldBeAIPropChangedItem()
+        {
+            DragonbornWaffleFries dw = new DragonbornWaffleFries();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(dw);
+        }
+
+
+        [Fact]
+        public void ChangingSizeNotifiesSizeProperty()
+        {
+            var dw = new DragonbornWaffleFries();
+
+            Assert.PropertyChanged(dw, "Size", () =>
+            {
+                dw.Size = Size.Large;
+            });
+
+            Assert.PropertyChanged(dw, "Size", () =>
+            {
+                dw.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(dw, "Size", () =>
+            {
+                dw.Size = Size.Small;
+            });
+        }
+
+        [Fact]
+        public void ChangingSizeNotifiesCalProperty()
+        {
+            var dw = new DragonbornWaffleFries();
+
+            Assert.PropertyChanged(dw, "Size", () =>
+            {
+                dw.Size = Size.Large;
+                dw.Calories.Equals(100);
+            });
+
+            Assert.PropertyChanged(dw, "Size", () =>
+            {
+                dw.Size = Size.Medium;
+                dw.Calories.Equals(89);
+
+            });
+            Assert.PropertyChanged(dw, "Size", () =>
+            {
+                dw.Size = Size.Small;
+                dw.Calories.Equals(77);
+            });
+        }
+
+        [Fact]
+        public void ChangingSizeNotifiesPriceProperty()
+        {
+            var dw = new DragonbornWaffleFries();
+
+            Assert.PropertyChanged(dw, "Size", () =>
+            {
+                dw.Size = Size.Large;
+                dw.Price.Equals(.96);
+            });
+
+            Assert.PropertyChanged(dw, "Size", () =>
+            {
+                dw.Size = Size.Medium;
+                dw.Price.Equals(.76);
+
+            });
+            Assert.PropertyChanged(dw, "Size", () =>
+            {
+                dw.Size = Size.Small;
+                dw.Price.Equals(.42);
+            });
+        }
+
         [Fact]
         public void ShouldBeASide()
         {

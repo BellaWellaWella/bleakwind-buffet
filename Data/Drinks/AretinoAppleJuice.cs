@@ -11,19 +11,64 @@ using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// A Class that represents the drink, Aretino Apple Juice
     /// </summary>
-    public class AretinoAppleJuice : Drink
+    public class AretinoAppleJuice : Drink, INotifyPropertyChanged
     {
+
+        /// <summary>
+        /// declaring the event handler for PropertyChanged
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// method to handle if the property changed
+        /// </summary>
+        /// <param name="propertyName"> the property that is being changed</param>
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        //private backing variable for size
+        private Size size;
+
+        /// <summary>
+        /// gets & sets the size preference
+        /// </summary>
+        public override Size Size
+        {
+            get { return size; }
+            set { size = value;
+                OnPropertyChanged("Calories");
+                OnPropertyChanged("Price");
+                OnPropertyChanged("Size");
+            }
+        }
+
+
 
         /// <value>
         /// gets & sets the ice preference
         /// </value>
-        public bool Ice { get; set; } = false;
+
+        private bool ice = false;
+
+        public bool Ice
+        {
+            get { return ice; }
+            set { ice =  value;
+                OnPropertyChanged("Ice");
+
+            }
+        }
+
 
         /// <value>
         /// gives the calories based on size

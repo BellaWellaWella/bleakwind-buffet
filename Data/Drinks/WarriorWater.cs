@@ -7,24 +7,82 @@ using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// A class to represent the drink warrior water
     /// </summary>
-    public class WarriorWater : Drink
+    public class WarriorWater : Drink, INotifyPropertyChanged 
     {
+        /// <summary>
+        /// Declaring the event handler for PropertyChanged
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
 
-        /// <value>
-        /// gets & sets the Lemon preference
-        /// </value>
-        public bool Lemon { get; set; } = false;
+        /// <summary>
+        /// method for on property changed
+        /// </summary>
+        /// <param name="propertyName">the property that is changing</param>
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        /// <summary>
+        /// private backing variable for size
+        /// </summary>
+        private Size size;
+
+        /// <summary>
+        /// gets & sets size
+        /// </summary>
+        public override Size Size
+        {
+            get { return size; }
+            set
+            {
+                size = value;
+                OnPropertyChanged("Size");
+                OnPropertyChanged("Calories");
+                OnPropertyChanged("Price");
+            }
+        }
+
 
         /// <value>
         /// gets & sets the ice preference
         /// </value>
-        public bool Ice { get; set; } = true;
+
+        private bool ice = true;
+
+        public bool Ice
+        {
+            get { return ice; }
+            set
+            {
+                ice = value;
+                OnPropertyChanged("Ice");
+
+            }
+        }
+
+
+        private bool lemon = false;
+
+        public bool Lemon
+        {
+            get { return lemon; }
+            set
+            {
+                lemon = value;
+                OnPropertyChanged("Lemon");
+
+            }
+        }
+
 
         /// <value>
         /// Gets & sets the calories property
@@ -50,8 +108,6 @@ namespace BleakwindBuffet.Data.Drinks
                     throw new NotImplementedException();
                 }
             }
-        
-        
         }
 
         /// <value>

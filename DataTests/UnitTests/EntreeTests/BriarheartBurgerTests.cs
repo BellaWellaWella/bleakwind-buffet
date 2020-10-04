@@ -9,11 +9,99 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
 using System.Security.Cryptography.X509Certificates;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class BriarheartBurgerTests
     {
+        [Fact]
+        public void ShouldBeAIPropChangedItem()
+        {
+            BriarheartBurger bb = new BriarheartBurger();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(bb);
+        }
+
+        [Fact]
+        public void ChangingKetchupNotifiesKetchupProperty()
+        {
+            var bb = new BriarheartBurger();
+
+            Assert.PropertyChanged(bb, "Ketchup", () =>
+            {
+                bb.Ketchup = true;
+            });
+
+            Assert.PropertyChanged(bb, "Ketchup", () =>
+            {
+                bb.Ketchup = false;
+            });
+        }
+
+        [Fact]
+        public void ChangingBunNotifiesBunProperty()
+        {
+            var bb = new BriarheartBurger();
+
+            Assert.PropertyChanged(bb, "Bun", () =>
+            {
+                bb.Bun = true;
+            });
+
+            Assert.PropertyChanged(bb, "Bun", () =>
+            {
+                bb.Bun = false;
+            });
+        }
+
+        [Fact]
+        public void ChangingMustardNotifiesMustardProperty()
+        {
+            var bb = new BriarheartBurger();
+
+            Assert.PropertyChanged(bb, "Mustard", () =>
+            {
+                bb.Mustard = true;
+            });
+
+            Assert.PropertyChanged(bb, "Mustard", () =>
+            {
+                bb.Mustard = false;
+            });
+        }
+
+        [Fact]
+        public void ChangingPickleNotifiesPickleProperty()
+        {
+            var bb = new BriarheartBurger();
+
+            Assert.PropertyChanged(bb, "Pickle", () =>
+            {
+                bb.Pickle = true;
+            });
+
+            Assert.PropertyChanged(bb, "Pickle", () =>
+            {
+                bb.Pickle = false;
+            });
+        }
+
+        [Fact]
+        public void ChangingCheeseNotifiesChesseProperty()
+        {
+            var bb = new BriarheartBurger();
+
+            Assert.PropertyChanged(bb, "Cheese", () =>
+            {
+                bb.Cheese = true;
+            });
+
+            Assert.PropertyChanged(bb, "Cheese", () =>
+            {
+                bb.Cheese = false;
+            });
+        }
+
         [Fact]
         public void ShouldBeAnEntree()
         {

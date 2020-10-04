@@ -7,15 +7,70 @@ using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// A class that represents the drink sailor soda
     /// </summary>
-    public class SailorSoda : Drink
+    public class SailorSoda : Drink, INotifyPropertyChanged
     {
-      
+        /// <summary>
+        /// Declaring the event handler for PropertyChanged
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+
+        /// <summary>
+        /// method for on property change
+        /// </summary>
+        /// <param name="propertyName"> the property that is changed</param>
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        /// <summary>
+        /// private backing variable for size
+        /// </summary>
+        private Size size;
+
+        /// <summary>
+        /// gets & sets size
+        /// </summary>
+        public override Size Size
+        {
+            get { return size; }
+            set
+            {
+                size = value;
+                OnPropertyChanged("Calories");
+                OnPropertyChanged("Price");
+                OnPropertyChanged("Size");
+            }
+        }
+
+
+        /// <value>
+        /// gets & sets the ice preference
+        /// </value>
+
+        private bool ice = true;
+
+        public bool Ice
+        {
+            get { return ice; }
+            set
+            {
+                ice = value;
+                OnPropertyChanged("Ice");
+
+            }
+        }
+
+
         /// <value>
         /// gets & sets the flavor preference
         /// </value>
@@ -24,13 +79,12 @@ namespace BleakwindBuffet.Data.Drinks
         {
             get { return flavor; }
 
-            set { flavor = value; }
+            set { flavor = value;
+                OnPropertyChanged("Flavor");
+            }
         }
 
-        /// <value>
-        /// gets & sets the ice preference
-        /// </value>
-        public bool Ice { get; set; } = true;
+       
 
         /// <value>
         /// gets & sets the calorie property

@@ -6,14 +6,30 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace BleakwindBuffet.Data.Entrees
 {
     /// <summary>
     /// A class representing the entree, Philly poacher
     /// </summary>
-    public class PhillyPoacher : Entree
+    public class PhillyPoacher : Entree, INotifyPropertyChanged 
     {
+        /// <summary>
+        /// declares the event handler  for PropertyChanged
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// method for when the property changes
+        /// </summary>
+        /// <param name="propertyName"></param>
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         /// <value>
         /// Gets the Price of the burger
         /// </value>
@@ -24,20 +40,48 @@ namespace BleakwindBuffet.Data.Entrees
         /// </value>
         public override uint Calories => 784;
 
+        private bool sirloin = true;
         /// <value>
-        /// gets & sets the sausage preference
+        /// gets & sets the sirloin preference
         /// </value>
-        public bool Sirloin { get; set; } = true;
+        public bool Sirloin
+        {
+            get { return sirloin; }
+            set
+            {
+                sirloin = value;
+                OnPropertyChanged("Sirloin");
+            }
+        }
 
+        private bool onion = true;
         /// <value>
-        /// gets & sets the egg preference
+        /// gets & sets the onion preference
         /// </value>
-        public bool Onion { get; set; } = true;
+        public bool Onion
+        {
+            get { return onion; }
+            set
+            {
+                onion = value;
+                OnPropertyChanged("Onion");
+            }
+        }
 
+        private bool roll = true;
         /// <value>
-        /// gets & sets the hash browns preference
+        /// gets & sets the roll preference
         /// </value>
-        public bool Roll { get; set; } = true;
+        public bool Roll
+        {
+            get { return roll; }
+            set
+            {
+                roll = value;
+                OnPropertyChanged("Roll");
+            }
+        }
+
 
 
         /// <value>

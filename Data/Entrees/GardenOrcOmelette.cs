@@ -6,14 +6,31 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace BleakwindBuffet.Data.Entrees
 {
     /// <summary>
     /// A class representing the entree, Garden Orc Omlette
     /// </summary>
-    public class GardenOrcOmelette : Entree
-    {
+    public class GardenOrcOmelette : Entree, INotifyPropertyChanged
+    { 
+
+        /// <summary>
+        /// Declaring the event handler  for PropertyChanged
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// method for when the property changes
+        /// </summary>
+        /// <param name="propertyName"></param>
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         /// <value>
         /// Gets the Price of the omelette
         /// </value>
@@ -24,27 +41,64 @@ namespace BleakwindBuffet.Data.Entrees
         /// </value>
         public override uint Calories => 404;
 
+        private bool broccoli = true;
         /// <value>
         /// gets & sets the broccoli preference
         /// </value>
-        public bool Broccoli { get; set; } = true;
+        public bool Broccoli
+        {
+            get { return broccoli; }
+            set
+            {
+                broccoli = value;
+                OnPropertyChanged("Broccoli");
+            }
+        }
 
+        private bool mushrooms = true;
         /// <value>
         /// gets & sets the mushroom preference
         /// </value>
-        public bool Mushrooms { get; set; } = true;
+        public bool Mushrooms
+        {
+            get { return mushrooms; }
+            set
+            {
+                mushrooms = value;
+                OnPropertyChanged("Mushrooms");
+            }
+        }
 
+
+        private bool tomato = true;
         /// <value>
         /// gets & sets the tomato preference
         /// </value>
-        public bool Tomato { get; set; } = true;
+        public bool Tomato
+        {
+            get { return tomato; }
+            set
+            {
+                tomato = value;
+                OnPropertyChanged("Tomato");
+            }
+        }
 
+        private bool cheddar = true;
         /// <value>
         /// gets & sets the cheddar preference
         /// </value>
-        public bool Cheddar { get; set; } = true;
+        public bool Cheddar
+        {
+            get { return cheddar; }
+            set
+            {
+                cheddar = value;
+                OnPropertyChanged("Cheddar");
+            }
+        }
 
-
+        
         /// <value>
         /// sets up the special instructions
         /// </value>
