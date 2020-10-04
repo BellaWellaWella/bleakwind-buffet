@@ -9,7 +9,7 @@
     <Grid Background="LightSalmon">
         <!-- Change button names & visibility based off of click from menu chooser-->
         <TextBox Name ="Name" HorizontalAlignment="Center" Height="30" Margin="0,44,0,0" Text="Markarth Milk" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"  TextAlignment="Center" FontSize="20"/>
-        <CheckBox Name ="IceCheck" Content="Ice" IsChecked="False" HorizontalAlignment="Left" Margin="110,110,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible" />
+        <CheckBox Name ="IceCheck" Content="Ice" IsChecked="{Binding Path=MarkarthMilk.Ice}" HorizontalAlignment="Left" Margin="110,110,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible" />
 
         <Button  Name ="AddToOrderButton" Content="Add To Order" HorizontalAlignment="Left" Margin="365,294,0,0" VerticalAlignment="Top" Height="73" Width="155" FontSize="20" Click="AddToOrderButton_Click_1"/>
         <ComboBox Name="ComboBox1" HorizontalAlignment="Left" Margin="400,134,0,0" VerticalAlignment="Top" Width="120" Visibility="Visible">

@@ -9,11 +9,11 @@
     <Grid Background="LightSalmon">
         <!-- Change button names & visibility based off of click from menu chooser-->
         <TextBox HorizontalAlignment="Center" Height="30" Margin="0,44,0,0" Text="Briarheart Burger" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" TextAlignment="Center" FontSize="20"/>
-        <CheckBox Name ="CheckBox1" IsChecked="True" Content="Bun" HorizontalAlignment="Left" Margin="110,110,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible" />
-        <CheckBox Name ="CheckBox2" IsChecked="True" Content="Ketchup" HorizontalAlignment="Left" Margin="110,150,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible"/>
-        <CheckBox Name ="CheckBox3" IsChecked="True" Content="Mustard" HorizontalAlignment="Left" Margin="110,190,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible"/>
-        <CheckBox Name ="CheckBox4" IsChecked="True" Content="Pickle" HorizontalAlignment="Left" Margin="110,230,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible"/>
-        <CheckBox Name ="CheckBox5" IsChecked="True" Content="Cheese" HorizontalAlignment="Left" Margin="110,270,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible"/>
+        <CheckBox Name ="CheckBox1" IsChecked="{Binding Path=BriarheartBurger.Bun}" Content="Bun" HorizontalAlignment="Left" Margin="110,110,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible" />
+        <CheckBox Name ="CheckBox2" IsChecked="{Binding Path=BriarheartBurger.Ketchup}" Content="Ketchup" HorizontalAlignment="Left" Margin="110,150,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible"/>
+        <CheckBox Name ="CheckBox3" IsChecked="{Binding Path=BriarheartBurger.Mustard}" Content="Mustard" HorizontalAlignment="Left" Margin="110,190,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible"/>
+        <CheckBox Name ="CheckBox4" IsChecked="{Binding Path=BriarheartBurger.Pickle}" Content="Pickle" HorizontalAlignment="Left" Margin="110,230,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible"/>
+        <CheckBox Name ="CheckBox5" IsChecked="{Binding Path=BriarheartBurger.Cheese}" Content="Cheese" HorizontalAlignment="Left" Margin="110,270,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible"/>
       
         <Button  Name ="AddToOrderButton" Content="Add To Order" HorizontalAlignment="Left" Margin="365,294,0,0" VerticalAlignment="Top" Height="73" Width="155" FontSize="20" Click="AddToOrderButton_Click_1"/>
         <Button Name="BackButton" Content="Back" HorizontalAlignment="Left" Margin="520,400,0,0" Width="70" FontSize="20" Height="40" VerticalAlignment="Top" Click="BackButton_Click"/>

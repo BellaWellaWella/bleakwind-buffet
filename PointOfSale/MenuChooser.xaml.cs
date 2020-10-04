@@ -9,6 +9,9 @@
  * 
 */
 using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data.Entrees;
+using BleakwindBuffet.Data.Sides;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -51,7 +54,9 @@ namespace PointOfSale
         /// <param name="e"></param>
         public void BriarheartBurgerButton_Click(object sender, RoutedEventArgs e)
         {
+            this.DataContext = new BriarheartBurger();
             Ancestor.SwitchScreen(Screen.BriarheartBurger);
+            
         }
 
         /// <summary>
@@ -61,6 +66,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void WarriorWaterButton_Click(object sender, RoutedEventArgs e)
         {
+            this.DataContext = new WarriorWater();
             Ancestor.SwitchScreen(Screen.WarriorWater);
 
         }
@@ -72,6 +78,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void SailorsSodaButton_Click(object sender, RoutedEventArgs e)
         {
+            this.DataContext = new SailorSoda();
             Ancestor.SwitchScreen(Screen.SailorsSoda);
         }
 
@@ -82,6 +89,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void MarkarthMilkButton_Click(object sender, RoutedEventArgs e)
         {
+            this.DataContext = new MarkarthMilk();
             Ancestor.SwitchScreen(Screen.MarkarthMilk);
 
         }
@@ -93,6 +101,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void CandlehearthCoffeeButton_Click(object sender, RoutedEventArgs e)
         {
+            this.DataContext = new CandlehearthCoffee();
             Ancestor.SwitchScreen(Screen.CandlehearthCoffee);
         }
 
@@ -103,6 +112,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AretinoAppleJuiceButton_Click(object sender, RoutedEventArgs e)
         {
+            this.DataContext = new AretinoAppleJuice();
             Ancestor.SwitchScreen(Screen.AretinoAppleJuice);
 
         }
@@ -114,6 +124,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void DragonbornWaffleFriesButton_Click(object sender, RoutedEventArgs e)
         {
+            this.DataContext = new DragonbornWaffleFries();
             Ancestor.SwitchScreen(Screen.DragonbornWaffleFries);
         }
 
@@ -124,6 +135,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void FriedMirrakButton_Click(object sender, RoutedEventArgs e)
         {
+            this.DataContext = new FriedMiraak();
             Ancestor.SwitchScreen(Screen.FriedMiraak);
         }
 
@@ -134,6 +146,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void MadOtarGritsButton_Click(object sender, RoutedEventArgs e)
         {
+            this.DataContext = new MadOtarGrits();
             Ancestor.SwitchScreen(Screen.MadOtarGrits);
         }
 
@@ -144,6 +157,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void VokunSaladButton_Click(object sender, RoutedEventArgs e)
         {
+            this.DataContext = new VokunSalad();
             Ancestor.SwitchScreen(Screen.VokunSalad);
         }
 
@@ -154,6 +168,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void DoubleDraugrButton_Click(object sender, RoutedEventArgs e)
         {
+            this.DataContext = new DoubleDraugr();
             Ancestor.SwitchScreen(Screen.DoubleDraugr);
         }
 
@@ -164,6 +179,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void ThalmorTripleButton_Click(object sender, RoutedEventArgs e)
         {
+            this.DataContext = new ThalmorTriple();
             Ancestor.SwitchScreen(Screen.ThalmorTriple);
         }
 
@@ -174,6 +190,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void GardenOrcOmeletteButton_Click(object sender, RoutedEventArgs e)
         {
+            this.DataContext = new GardenOrcOmelette();
             Ancestor.SwitchScreen(Screen.GardenOrcOmelette);
         }
 
@@ -184,6 +201,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void PhillyPoacherButton_Click(object sender, RoutedEventArgs e)
         {
+            this.DataContext = new PhillyPoacher();
             Ancestor.SwitchScreen(Screen.PhillyPoacher);
         }
 
@@ -194,6 +212,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void SmokehouseSkeletonButton_Click(object sender, RoutedEventArgs e)
         {
+            this.DataContext = new SmokehouseSkeleton();
             Ancestor.SwitchScreen(Screen.SmokehouseSkeleton);
         }
 
@@ -204,6 +223,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void ThugsTBoneButton_Click(object sender, RoutedEventArgs e)
         {
+            this.DataContext = new ThugsTBone();
             Ancestor.SwitchScreen(Screen.ThugsTBone);
         }
     }
