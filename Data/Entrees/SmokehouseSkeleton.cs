@@ -51,6 +51,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
                 sausageLink = value;
                 OnPropertyChanged("SausageLink");
+                OnPropertyChanged("SpecialInstructions");
             }
         }
 
@@ -65,6 +66,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
                 egg = value;
                 OnPropertyChanged("Egg");
+                OnPropertyChanged("SpecialInstructions");
             }
         }
 
@@ -79,6 +81,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
                 hashBrowns = value;
                 OnPropertyChanged("HashBrowns");
+                OnPropertyChanged("SpecialInstructions");
             }
         }
 
@@ -93,6 +96,8 @@ namespace BleakwindBuffet.Data.Entrees
             {
                 pancake = value;
                 OnPropertyChanged("Pancake");
+                OnPropertyChanged("SpecialInstructions");
+
             }
         }
 

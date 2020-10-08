@@ -51,6 +51,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
                 sirloin = value;
                 OnPropertyChanged("Sirloin");
+                OnPropertyChanged("SpecialInstructions");
             }
         }
 
@@ -65,6 +66,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
                 onion = value;
                 OnPropertyChanged("Onion");
+                OnPropertyChanged("SpecialInstructions");
             }
         }
 
@@ -78,7 +80,8 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 roll = value;
-                OnPropertyChanged("Roll");
+                OnPropertyChanged("Roll"); 
+                OnPropertyChanged("SpecialInstructions");
             }
         }
 

@@ -51,6 +51,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
                 ketchup = value;
                 OnPropertyChanged("Ketchup");
+                OnPropertyChanged("SpecialInstructions");
             }
         }
 
@@ -65,6 +66,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
                 bun = value;
                 OnPropertyChanged("Bun");
+                OnPropertyChanged("SpecialInstructions");
             }
         }
 
@@ -79,6 +81,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
                 mustard = value;
                 OnPropertyChanged("Mustard");
+                OnPropertyChanged("SpecialInstructions");
             }
         }
 
@@ -93,6 +96,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
                 pickle = value;
                 OnPropertyChanged("Pickle");
+                OnPropertyChanged("SpecialInstructions");
             }
         }
 
@@ -107,6 +111,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
                 cheese = value;
                 OnPropertyChanged("Cheese");
+                OnPropertyChanged("SpecialInstructions");
             }
         }
 

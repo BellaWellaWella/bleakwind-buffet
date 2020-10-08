@@ -65,6 +65,7 @@ namespace BleakwindBuffet.Data.Drinks
             {
                 ice = value;
                 OnPropertyChanged("Ice");
+                OnPropertyChanged("SpecialInstructions");
 
             }
         }
@@ -79,6 +80,7 @@ namespace BleakwindBuffet.Data.Drinks
             {
                 lemon = value;
                 OnPropertyChanged("Lemon");
+                OnPropertyChanged("SpecialInstructions");
 
             }
         }
