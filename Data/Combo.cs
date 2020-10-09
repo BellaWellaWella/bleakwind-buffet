@@ -14,9 +14,7 @@ namespace BleakwindBuffet.Data
     {
         public Combo()
         {
-            Drink = drink;
-            Entree = entree;
-            Side = side;
+         
         }
 
 

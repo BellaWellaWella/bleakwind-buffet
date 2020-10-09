@@ -10,10 +10,10 @@
         <TextBox Name="OrderNumBox" Text="Order # "  DockPanel.Dock="Top" FontWeight="Bold" TextAlignment="Center" FontSize="20"/>
 
 
-        <TextBox Name ="CalorieBox" DockPanel.Dock="Bottom" Text="Calories: " FontSize="20" />
-        <TextBox Name ="TotalBox" DockPanel.Dock="Bottom" Text="Total: " FontSize="20" FontWeight="Bold"/>
-        <TextBox Name ="TaxBox" DockPanel.Dock="Bottom" Text="Tax: " FontSize="20" />
-        <TextBox Name ="SubtotalBox" DockPanel.Dock="Bottom" Text="Subtotal: " FontSize="20" />
+        <TextBox Name ="CalorieBox" DockPanel.Dock="Bottom" Text="Calories: {Binding Path=Calories}" FontSize="20" />
+        <TextBox Name ="TotalBox" DockPanel.Dock="Bottom" Text="Total: {Binding Path=Total}" FontSize="20" FontWeight="Bold"/>
+        <TextBox Name ="TaxBox" DockPanel.Dock="Bottom" Text="Tax: {Binding Path=Tax}" FontSize="20" />
+        <TextBox Name ="SubtotalBox" DockPanel.Dock="Bottom" Text="Subtotal: {Binding Path=Subtotal}" FontSize="20" />
 
         <ListView Name="orderList" Height="457" Width="200" >
             <ListView.ItemTemplate>

@@ -31,8 +31,10 @@ namespace PointOfSale
     {
         public Order()
         {
-            InitializeComponent();
-            //orderList.ItemsSource = ;
+            if(DataContext is BleakwindBuffet.Data.Order currentOrder)
+            {
+                orderList.ItemsSource = currentOrder;
+            }
         }
     }
 }

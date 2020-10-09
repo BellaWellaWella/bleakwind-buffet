@@ -140,8 +140,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [Fact]
         public void ShouldBeAbleToSetIce()
         {
-            AretinoAppleJuice aj = new AretinoAppleJuice();
-            aj.Ice = true;
+            AretinoAppleJuice aj = new AretinoAppleJuice
+            {
+                Ice = true
+            };
             Assert.True(aj.Ice);
             aj.Ice = false;
             Assert.False(aj.Ice);
@@ -200,8 +202,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [InlineData(Size.Large, "Large Aretino Apple Juice")]
         public void ShouldReturnCorrectToStringBasedOnSize(Size size, string name)
         {
-            AretinoAppleJuice aj = new AretinoAppleJuice();
-            aj.Size = size;
+            AretinoAppleJuice aj = new AretinoAppleJuice
+            {
+                Size = size
+            };
             Assert.Equal(name, aj.ToString());
         }
     }

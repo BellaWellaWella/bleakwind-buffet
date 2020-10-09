@@ -87,7 +87,7 @@ namespace BleakwindBuffet.DataTests
             o.Add(new BriarheartBurger());
 
 
-            Assert.PropertyChanged(o, "Calories", () =>
+            Assert.PropertyChanged(o, "TotalCalories", () =>
             {
                 o.Add(new SailorSoda());
             });
@@ -143,7 +143,7 @@ namespace BleakwindBuffet.DataTests
             o.Add(b);
 
 
-            Assert.PropertyChanged(o, "Calories", () =>
+            Assert.PropertyChanged(o, "TotalCalories", () =>
             {
                 o.Remove(b);
             });
