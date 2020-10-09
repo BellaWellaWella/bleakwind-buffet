@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace BleakwindBuffet.Data
@@ -24,5 +25,7 @@ namespace BleakwindBuffet.Data
         /// Special instructions to prepare the drink
         /// </summary>
         List<string> SpecialInstructions { get; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

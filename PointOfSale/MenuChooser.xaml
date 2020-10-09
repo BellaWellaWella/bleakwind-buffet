@@ -56,7 +56,7 @@
         <Button Grid.Row="4" Grid.Column="2" IsEnabled="True" Name="WarriorWaterButton" Content="Warrior Water" FontSize="20" Background="MintCream" Click="WarriorWaterButton_Click">
         </Button>
 
-        <Button Grid.Row="6" Grid.Column="2" IsEnabled="True" Name="ClearButton" Content="Clear" FontSize="20" Background="PaleVioletRed">
+        <Button Grid.Row="6" Grid.Column="2" IsEnabled="True" Name="ClearButton" Content="Clear" FontSize="20" Background="PaleVioletRed" Click="ClearButton_Click">
         </Button>
         <Button Grid.Row="6" Grid.Column="1" IsEnabled="True" Name="CheckoutButton" Content="Checkout" FontSize="20" Background="LawnGreen">
         </Button>

@@ -12,7 +12,7 @@
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
         <Border Name="switchableContent"  Grid.Column="0">
-            <local:MenuChooser x:Name="menuChoose" HorizontalAlignment="Left" Width="600" Loaded="menuChoose_Loaded"/>
+            <local:MenuChooser x:Name="menuChooser" HorizontalAlignment="Left" Width="600" Loaded="menuChooser_Loaded"/>
         </Border>
         <local:Order Grid.Column="1"/>
     </Grid>

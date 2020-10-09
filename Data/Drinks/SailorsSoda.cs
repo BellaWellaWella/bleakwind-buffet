@@ -17,6 +17,13 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class SailorSoda : Drink, INotifyPropertyChanged
     {
+        public SailorSoda()
+        {
+            this.Ice = true;
+            this.Flavor = SodaFlavor.Cherry;
+            this.Size = Size.Small;
+        }
+
         /// <summary>
         /// Declaring the event handler for PropertyChanged
         /// </summary>
@@ -35,7 +42,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// private backing variable for size
         /// </summary>
-        private Size size;
+        private Size size = Size.Small;
 
         /// <summary>
         /// gets & sets size

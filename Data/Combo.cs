@@ -12,6 +12,14 @@ namespace BleakwindBuffet.Data
     /// </summary>
     public class Combo : IOrderItem, INotifyPropertyChanged
     {
+        public Combo()
+        {
+            Drink = drink;
+            Entree = entree;
+            Side = side;
+        }
+
+
         private IOrderItem drink;
         /// <summary>
         /// represents the drink in the combo
@@ -25,10 +33,12 @@ namespace BleakwindBuffet.Data
             set
             {
                 drink = value;
+                drink.PropertyChanged += ItemEventChange;
                 OnPropertyChanged("Drink");
                 OnPropertyChanged("Price");
                 OnPropertyChanged("Calories");
                 OnPropertyChanged("SpecialInstructions");
+
             }
         }
 
@@ -46,11 +56,12 @@ namespace BleakwindBuffet.Data
             set
             {
                 side = value;
+                side.PropertyChanged += ItemEventChange;
                 OnPropertyChanged("Side");
                 OnPropertyChanged("Price");
                 OnPropertyChanged("Calories");
                 OnPropertyChanged("SpecialInstructions");
-            }
+             }
         }
 
         private IOrderItem entree;
@@ -67,14 +78,15 @@ namespace BleakwindBuffet.Data
             set
             {
                 entree = value;
+                entree.PropertyChanged += ItemEventChange;
                 OnPropertyChanged("Entree");
                 OnPropertyChanged("Price");
                 OnPropertyChanged("Calories");
                 OnPropertyChanged("SpecialInstructions");
-
-
+                
             }
         }
+
 
         /// <summary>
         /// Declaring the event handler for PropertyChanged
@@ -138,6 +150,22 @@ namespace BleakwindBuffet.Data
                 instructions.Add(Drink.SpecialInstructions.ToString());
 
                 return instructions;
+            }
+        }
+
+        private void ItemEventChange(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == "Price")
+            {
+                OnPropertyChanged("Price");
+            }
+            if (e.PropertyName == "Calories")
+            {
+                OnPropertyChanged("Calories");
+            }
+            if (e.PropertyName == "SpecialInstructions")
+            {
+                OnPropertyChanged("SpecialInstructions");
             }
         }
 

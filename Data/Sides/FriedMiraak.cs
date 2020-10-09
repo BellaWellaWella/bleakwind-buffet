@@ -19,6 +19,14 @@ namespace BleakwindBuffet.Data.Sides
     public class FriedMiraak : Side, INotifyPropertyChanged
     {
         /// <summary>
+        /// The constructor for FriedMiraak
+        /// </summary>
+        public FriedMiraak()
+        {
+            this.Size = Size.Small;
+        }
+
+        /// <summary>
         /// PropertyChanged Event handler
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
@@ -33,7 +41,7 @@ namespace BleakwindBuffet.Data.Sides
         }
 
         //private backing variable for size
-        private Size size;
+        private Size size = Size.Small;
 
         /// <summary>
         /// gets & sets the size preference

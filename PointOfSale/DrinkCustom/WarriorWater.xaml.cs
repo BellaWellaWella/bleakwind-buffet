@@ -8,6 +8,7 @@
  * 
  * 
 */
+using BleakwindBuffet.Data.Drinks;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -38,6 +39,7 @@ namespace PointOfSale.DrinkCustom
         {
             InitializeComponent();
             this.Ancestor = ancestor;
+            this.DataContext = new BleakwindBuffet.Data.Drinks.WarriorWater();
         }
         /*
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

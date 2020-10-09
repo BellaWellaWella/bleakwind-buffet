@@ -38,6 +38,8 @@ namespace PointOfSale.DrinkCustom
         {
             InitializeComponent();
             this.Ancestor = ancestor;
+            this.DataContext = new BleakwindBuffet.Data.Drinks.AretinoAppleJuice();
+
         }
         /*
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

@@ -7,13 +7,24 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="200">
     <DockPanel>
-        <TextBlock Name="TextBlock1"  DockPanel.Dock="Top" FontWeight="Bold" TextAlignment="Center" FontSize="20">
-            Items in Order:</TextBlock>
-        <TextBox Name="TextBox1" DockPanel.Dock=" Top" FontWeight="Bold" TextAlignment="Center" FontSize="20"/>
+        <TextBox Name="OrderNumBox" Text="Order # "  DockPanel.Dock="Top" FontWeight="Bold" TextAlignment="Center" FontSize="20"/>
 
-        <TextBox Name ="Price" DockPanel.Dock="Bottom" Text="0.00" FontSize="20" />
-        <TextBox Name ="Total" DockPanel.Dock="Bottom" Text="Total: " FontSize="20" FontWeight="Bold"/>
-        
-        <ListView Name="itemsListView" />
+
+        <TextBox Name ="CalorieBox" DockPanel.Dock="Bottom" Text="Calories: " FontSize="20" />
+        <TextBox Name ="TotalBox" DockPanel.Dock="Bottom" Text="Total: " FontSize="20" FontWeight="Bold"/>
+        <TextBox Name ="TaxBox" DockPanel.Dock="Bottom" Text="Tax: " FontSize="20" />
+        <TextBox Name ="SubtotalBox" DockPanel.Dock="Bottom" Text="Subtotal: " FontSize="20" />
+
+        <ListView Name="orderList" Height="457" Width="200" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="{Binding Path=item}" FontWeight="Bold" />
+                        <TextBlock Text="{Binding Path=SpecialInstructions}" />
+                        <Button x:Name="removeButton" Content="Remove Item" />
+                    </WrapPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </DockPanel>
 </UserControl>

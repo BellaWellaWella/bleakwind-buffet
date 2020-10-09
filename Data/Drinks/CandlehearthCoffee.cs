@@ -18,6 +18,13 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class CandlehearthCoffee : Drink, INotifyPropertyChanged
     {
+        public CandlehearthCoffee()
+        {
+            this.Ice = false;
+            this.RoomForCream = false;
+            this.Decaf = false;
+            this.Size = Size.Small;
+        }
 
         /// <summary>
         /// Declaring the event handler for PropertyChanged
@@ -36,7 +43,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// private backing variable for size
         /// </summary>
-        private Size size;
+        private Size size = Size.Small;
 
         /// <summary>
         /// gets & sets the size preference

@@ -11,11 +11,29 @@ using System.Runtime.CompilerServices;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+
     /// <summary>
     /// A class that represents the entree, Thlmor Triple
     /// </summary>
     public class ThalmorTriple : Entree, INotifyPropertyChanged
     {
+        /// <summary>
+        /// constructor for Thalmor Triple
+        /// </summary>
+        public ThalmorTriple()
+        {
+            this.Ketchup = true;
+            this.Bun = true;
+            this.Mustard = true;
+            this.Pickle = true;
+            this.Cheese = true;
+            this.Tomato = true;
+            this.Lettuce = true;
+            this.Mayo = true;
+            this.Bacon = true;
+            this.Egg = true;
+        }
+
         /// <summary>
         /// Declaring the event handler for PropertyChanged
         /// </summary>

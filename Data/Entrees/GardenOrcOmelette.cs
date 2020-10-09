@@ -16,6 +16,16 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public class GardenOrcOmelette : Entree, INotifyPropertyChanged
     { 
+        /// <summary>
+        /// constructor for Garden orc omelette
+        /// </summary>
+        public GardenOrcOmelette()
+        {
+            this.Broccoli = true;
+            this.Mushrooms = true;
+            this.Tomato = true;
+            this.Cheddar = true;
+        }
 
         /// <summary>
         /// Declaring the event handler  for PropertyChanged

@@ -11,11 +11,21 @@ using System.Runtime.CompilerServices;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+
     /// <summary>
     /// A class representing the entree, Philly poacher
     /// </summary>
     public class PhillyPoacher : Entree, INotifyPropertyChanged 
     {
+        /// <summary>
+        /// constructor for philly poacher
+        /// </summary>
+        public PhillyPoacher()
+        {
+            this.Sirloin = true;
+            this.Onion = true;
+            this.Roll = true;
+        }
         /// <summary>
         /// declares the event handler  for PropertyChanged
         /// </summary>

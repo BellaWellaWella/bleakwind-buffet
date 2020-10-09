@@ -17,6 +17,18 @@ namespace BleakwindBuffet.Data.Entrees
     public class BriarheartBurger : Entree, INotifyPropertyChanged
     {
         /// <summary>
+        /// Constructor for Briarheart Burger
+        /// </summary>
+        public BriarheartBurger()
+        {
+            this.Ketchup = true;
+            this.Bun = true;
+            this.Mustard = true;
+            this.Pickle = true;
+            this.Cheese = true;
+        }
+
+        /// <summary>
         /// Declaring the event handler for PropertyChanged
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
@@ -101,6 +113,9 @@ namespace BleakwindBuffet.Data.Entrees
         }
 
         private bool cheese = true;
+
+        
+
         /// <value>
         /// gets & sets the cheese preference
         /// </value>

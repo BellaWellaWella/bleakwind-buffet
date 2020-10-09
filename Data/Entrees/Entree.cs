@@ -6,6 +6,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
@@ -31,5 +32,6 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
 
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

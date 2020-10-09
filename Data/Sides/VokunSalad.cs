@@ -13,11 +13,20 @@ using System.Runtime.CompilerServices;
 
 namespace BleakwindBuffet.Data.Sides
 {
+
     /// <summary>
     /// A class that represents the side, Vokun Salad
     /// </summary>
     public class VokunSalad : Side, INotifyPropertyChanged
     {
+        /// <summary>
+        /// The constructor for VokunSalad
+        /// </summary>
+        public VokunSalad()
+        {
+            this.Size = Size.Small;
+        }
+
         /// <summary>
         /// PropertyChanged event handler
         /// </summary>
@@ -33,7 +42,7 @@ namespace BleakwindBuffet.Data.Sides
         }
 
         //private backing variable for size
-        private Size size;
+        private Size size = Size.Small;
 
         /// <summary>
         /// gets & sets the size preference

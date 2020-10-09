@@ -38,6 +38,7 @@ namespace PointOfSale.SideCustom
         {
             InitializeComponent();
             this.Ancestor = ancestor;
+            this.DataContext = new BleakwindBuffet.Data.Sides.FriedMiraak();
         }
 
         /// <summary>

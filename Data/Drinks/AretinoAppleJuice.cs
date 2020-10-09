@@ -21,7 +21,11 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class AretinoAppleJuice : Drink, INotifyPropertyChanged
     {
-
+        public AretinoAppleJuice()
+        {
+            this.Ice = false;
+            this.Size = Size.Small;
+        }
         /// <summary>
         /// declaring the event handler for PropertyChanged
         /// </summary>
@@ -37,7 +41,7 @@ namespace BleakwindBuffet.Data.Drinks
         }
 
         //private backing variable for size
-        private Size size;
+        private Size size = Size.Small;
 
         /// <summary>
         /// gets & sets the size preference

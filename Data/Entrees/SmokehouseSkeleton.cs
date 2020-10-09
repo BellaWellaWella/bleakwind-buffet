@@ -17,6 +17,17 @@ namespace BleakwindBuffet.Data.Entrees
     public class SmokehouseSkeleton : Entree, INotifyPropertyChanged 
     {
         /// <summary>
+        /// constructor for smokehouse skeleton
+        /// </summary>
+        public SmokehouseSkeleton()
+        {
+            this.Egg = true;
+            this.HashBrowns = true;
+            this.Pancake = true;
+            this.SausageLink = true;
+        }
+
+        /// <summary>
         /// Declaring the event handler for PropertyChanged
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;

@@ -16,6 +16,20 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public class DoubleDraugr : Entree, INotifyPropertyChanged 
     {
+        /// <summary>
+        /// Constructor for DoubleDraugr
+        /// </summary>
+        public DoubleDraugr()
+        {
+            this.Ketchup = true;
+            this.Bun = true;
+            this.Mustard = true;
+            this.Pickle = true;
+            this.Cheese = true;
+            this.Tomato = true;
+            this.Lettuce = true;
+            this.Mayo = true;
+        }
 
         /// <summary>
         /// Declares the event handler for PropertyChanged
@@ -147,6 +161,9 @@ namespace BleakwindBuffet.Data.Entrees
         }
 
         private bool mayo = true;
+
+       
+
         /// <value>
         /// gets & sets the mayo preference
         /// </value>

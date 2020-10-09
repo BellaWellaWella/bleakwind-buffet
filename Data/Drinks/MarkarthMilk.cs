@@ -12,11 +12,19 @@ using System.Runtime.CompilerServices;
 
 namespace BleakwindBuffet.Data.Drinks
 {
+
+
     /// <summary>
     /// A class that represents the drink Markarth Milk
     /// </summary>
     public class MarkarthMilk : Drink, INotifyPropertyChanged
     {
+        public MarkarthMilk()
+        {
+            this.Ice = false;
+            this.Size = Size.Small;
+        }
+
         /// <summary>
         /// Declaring the event handler for PropertyChanged
         /// </summary>
@@ -34,7 +42,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// private backing variable for size
         /// </summary>
-        private Size size;
+        private Size size = Size.Small;
 
         /// <summary>
         /// gets & sets the size preference

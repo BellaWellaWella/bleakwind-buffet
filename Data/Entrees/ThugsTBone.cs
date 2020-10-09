@@ -17,6 +17,14 @@ namespace BleakwindBuffet.Data.Entrees
     public class ThugsTBone : Entree, INotifyPropertyChanged
     {
         /// <summary>
+        /// Constructor for Thugs T Bone
+        /// </summary>
+        public ThugsTBone()
+        {
+
+        }
+
+        /// <summary>
         /// Declaring the event handler for PropertyChanged
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;

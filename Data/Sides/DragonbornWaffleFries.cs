@@ -16,8 +16,16 @@ namespace BleakwindBuffet.Data.Sides
     /// <summary>
     /// A class that represents the side, Dragonborn Waffle Fries
     /// </summary>
-    public class DragonbornWaffleFries : Side, INotifyPropertyChanged
+    public class DragonbornWaffleFries : Side, INotifyPropertyChanged, IOrderItem
     {
+        /// <summary>
+        /// The constructor for DragonbornWaffleFries
+        /// </summary>
+        public DragonbornWaffleFries()
+        {
+            this.Size = Size.Small;
+        }
+
         /// <summary>
         /// declaration of the event handler for PropertyChanged
         /// </summary>
@@ -33,7 +41,7 @@ namespace BleakwindBuffet.Data.Sides
         }
 
         //private backing variable for size
-        private Size size;
+        private Size size = Size.Small;
 
         /// <summary>
         /// gets & sets the size preference

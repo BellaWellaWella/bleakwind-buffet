@@ -8,6 +8,7 @@
  * 
  * 
 */
+using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Drinks;
 using PointOfSale.DrinkCustom;
 using System;
@@ -38,8 +39,8 @@ namespace PointOfSale
         public Controller()
         {
             InitializeComponent();
-            menuChoose.Ancestor = this;
-            screens.Add(Screen.MenuChooser, menuChoose);
+            menuChooser.Ancestor = this;
+            screens.Add(Screen.MenuChooser, menuChooser);
             screens.Add(Screen.ItemCustom, new ItemCustom(this));
             screens.Add(Screen.WarriorWater, new DrinkCustom.WarriorWater(this));
             screens.Add(Screen.SailorsSoda, new SailorsSoda(this));
@@ -58,6 +59,11 @@ namespace PointOfSale
             screens.Add(Screen.PhillyPoacher, new EntreeCustom.PhillyPoacher(this));
             screens.Add(Screen.ThugsTBone, new EntreeCustom.ThugsTBone(this));
 
+            //Order mainOrder = new Order();
+
+            BleakwindBuffet.Data.Order currentOrder = new BleakwindBuffet.Data.Order();
+
+            this.DataContext = currentOrder;
         }
 
         /// <summary>

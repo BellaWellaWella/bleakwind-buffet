@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using BleakwindBuffet.Data.Enums;
 using System.Text;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Sides 
 {
@@ -36,5 +37,6 @@ namespace BleakwindBuffet.Data.Sides
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
 
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }
