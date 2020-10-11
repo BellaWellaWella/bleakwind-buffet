@@ -40,6 +40,8 @@ namespace BleakwindBuffet.Data
         /// constructor for the order class
         /// </summary>
         public Order(){
+            total = 0;
+            subtotal = 0;
             Number = nextOrderNumber;
             nextOrderNumber++;
             orderItems = new Collection<IOrderItem>();
@@ -121,7 +123,7 @@ namespace BleakwindBuffet.Data
             }
         }
 
-        private static int nextOrderNumber = 1;
+        private static int nextOrderNumber = 0;
         /// <summary>
         /// represents the order number, each number should be unique
         /// </summary>

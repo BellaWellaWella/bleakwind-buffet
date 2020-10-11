@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:PointOfSale.EntreeCustom"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="600">
-    <Grid Background="LightSalmon">
+    <Grid Background="LightSalmon" DataContext="{Binding Path=SelectedItem}">
         <!-- Change button names & visibility based off of click from menu chooser-->
         <TextBox Name="Name" HorizontalAlignment="Center" Height="30" Margin="0,44,0,0" Text="Smokehouse Skeleton" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" TextAlignment="Center" FontSize="20"/>
         <CheckBox Name ="CheckBox1" IsChecked="{Binding Path=SausageLink}" Content="Sausage Link" HorizontalAlignment="Left" Margin="110,110,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible" />
@@ -14,12 +14,10 @@
         <CheckBox Name ="CheckBox3" IsChecked="{Binding Path=HashBrowns}" Content="Hash Browns" HorizontalAlignment="Left" Margin="110,190,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible"/>
         <CheckBox Name ="CheckBox4" IsChecked="{Binding Path=Pancake}" Content="Pancake" HorizontalAlignment="Left" Margin="110,230,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible"/>
 
-        <Button  Name ="AddToOrderButton" Content="Add To Order" HorizontalAlignment="Left" Margin="365,294,0,0" VerticalAlignment="Top" Height="73" Width="155" FontSize="20" Click="AddToOrderButton_Click_1"/>
         <Button Name="BackButton" Content="Back" HorizontalAlignment="Left" Margin="520,400,0,0" Width="70" FontSize="20" Height="40" VerticalAlignment="Top" Click="BackButton_Click"/>
-        <Label Content="{Binding Path=Price}" HorizontalAlignment="Left" Margin="424,245,0,0" VerticalAlignment="Top" FontSize="20px"/>
-        <Label Content="Price:" HorizontalAlignment="Left" Margin="334,245,0,0" VerticalAlignment="Top" FontSize="20px"/>
-
-        <Label Content="{Binding Path=Calories}" HorizontalAlignment="Left" Margin="424,400,0,0" VerticalAlignment="Top" FontSize="20px"/>
-        <Label Content="Calories:" HorizontalAlignment="Left" Margin="334,400,0,0" VerticalAlignment="Top" FontSize="20px"/>
+        <Label Content="{Binding Path=Price}" HorizontalAlignment="Left" Margin="425,245,0,0" VerticalAlignment="Top" FontSize="20px"/>
+        <Label Content="Price:      $" HorizontalAlignment="Left" Margin="334,245,0,0" VerticalAlignment="Top" FontSize="20px"/>
+        <Label Content="{Binding Path=Calories}" HorizontalAlignment="Left" Margin="424,275,0,0" VerticalAlignment="Top" FontSize="20px"/>
+        <Label Content="Calories:" HorizontalAlignment="Left" Margin="334,275,0,0" VerticalAlignment="Top" FontSize="20px"/>
     </Grid>
 </UserControl>

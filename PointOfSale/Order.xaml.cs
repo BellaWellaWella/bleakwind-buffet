@@ -9,8 +9,12 @@
  * 
 */
 using BleakwindBuffet.Data;
+using PointOfSale.EntreeCustom;
+using PointOfSale.SideCustom;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -32,10 +36,14 @@ namespace PointOfSale
         public Order()
         {
             InitializeComponent();
+            
+        }
+
+
+        private void RemoveButton_Click(object sender, RoutedEventArgs e)
+        {
             if (DataContext is BleakwindBuffet.Data.Order currentOrder)
-            {
-                orderList.ItemsSource = currentOrder;
-            }
+            { currentOrder.Remove((IOrderItem)orderList.SelectedItem); }
         }
     }
 }

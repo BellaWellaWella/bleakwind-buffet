@@ -4,8 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
+             
              d:DesignHeight="600" d:DesignWidth="200">
+
     <DockPanel>
         <Grid DockPanel.Dock="Top">
             <Grid.ColumnDefinitions>
@@ -28,29 +30,32 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <TextBox Name="CalorieTextBox" Text="Calories" Grid.Column="0" Grid.Row="0" FontSize="20" />
-            <TextBox Name ="TotalTextBox" Text="Total"  Grid.Column="0" Grid.Row="1" FontSize="20"/>
+            <TextBox Name ="TotalTextBox" Text="Total"  Grid.Column="0" Grid.Row="3" FontSize="20"/>
             <TextBox Name ="TaxTextBox" Text="Tax"  Grid.Column="0" Grid.Row="2" FontSize="20" />
-            <TextBox Name ="SubtotalTextBox" Text="Subtotal"  Grid.Column="0" Grid.Row="3" FontSize="20"/>
+            <TextBox Name ="SubtotalTextBox" Text="Subtotal"  Grid.Column="0" Grid.Row="1" FontSize="20"/>
             <TextBox Name="CalorieNumbertBox" Text="{Binding Path=TotalCalories, Mode=OneWay}"  Grid.Column="1" Grid.Row="0" FontSize="20" />
-            <TextBox Name ="TotalNumberBox" Text="{Binding Path=Total, Mode=OneWay}" FontSize="20"  Grid.Column="1" Grid.Row="1" />
-            <TextBox Name ="TaxNumberBox" Text="{Binding Path=Tax, Mode=OneWay}" FontSize="20"  Grid.Column="1" Grid.Row="2" />
-            <TextBox Name ="SubtotalNumberBox" Text="{Binding Path=Subtotal, Mode=OneWay}" FontSize="20" Grid.Column="1" Grid.Row="3" />
+            <TextBox Name ="TotalNumberBox" Text="{Binding Path=Total, Mode=OneWay, StringFormat=N2}" FontSize="20"  Grid.Column="1" Grid.Row="3" />
+            <TextBox Name ="TaxNumberBox" Text="{Binding Path=Tax, Mode=OneWay,StringFormat=N2 }" FontSize="20"  Grid.Column="1" Grid.Row="2" />
+            <TextBox Name ="SubtotalNumberBox" Text="{Binding Path=Subtotal, Mode=OneWay,StringFormat=N2}" FontSize="20" Grid.Column="1" Grid.Row="1" />
         </Grid>
 
-        <Button DockPanel.Dock="Bottom" Height="50" Name="AddToOrderButton">
+        
 
-        </Button>
-
-        <ListView Name="orderList" Height="447" Width="200" >
-            <ListView.ItemTemplate>
+        <ListBox Name="orderList" Height="446" Width="200" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}">
+            <ListBox.ItemTemplate >
                 <DataTemplate>
-                    <WrapPanel>
-                        <TextBlock Text="{Binding Path=item}" FontWeight="Bold" />
-                        <TextBlock Text="{Binding Path=SpecialInstructions}" />
-                        <Button x:Name="removeButton" Content="Remove Item" />
-                    </WrapPanel>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding}" FontWeight="Bold" Grid.Row="0" />
+                        <TextBlock Text="{Binding Path=SpecialInstructions}" Grid.Row="1"/>
+                        <Button x:Name="removeButton" Content="Remove Item" Grid.Row="2" Click="RemoveButton_Click"  />
+                    </Grid>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </DockPanel>
 </UserControl>

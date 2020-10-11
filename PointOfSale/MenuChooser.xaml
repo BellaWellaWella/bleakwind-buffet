@@ -51,7 +51,7 @@
         </Button>
         <Button Grid.Row="2" Grid.Column="2" IsEnabled="True" Name="MarkarthMilkButton" Content="Markarth Milk" FontSize="20" Background="MintCream" Click="MarkarthMilkButton_Click">
         </Button>
-        <Button Grid.Row="2" Grid.Column="2" IsEnabled="True" Name="SailorsSodaButton" Content="Sailor's Soda" FontSize="20" Background="MintCream" Height="86" Margin="0,86,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Click="SailorsSodaButton_Click">
+        <Button Grid.Row="3" Grid.Column="2" IsEnabled="True" Name="SailorsSodaButton" Content="Sailor's Soda" FontSize="20" Background="MintCream"  Click="SailorsSodaButton_Click">
         </Button>
         <Button Grid.Row="4" Grid.Column="2" IsEnabled="True" Name="WarriorWaterButton" Content="Warrior Water" FontSize="20" Background="MintCream" Click="WarriorWaterButton_Click">
         </Button>

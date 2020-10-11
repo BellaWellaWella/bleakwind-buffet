@@ -42,20 +42,7 @@ namespace PointOfSale.EntreeCustom
 
         }
 
-        /// <summary>
-        /// Button to add item to order and go back to main screen
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void AddToOrderButton_Click_1(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is BleakwindBuffet.Data.Order currentOrder)
-            {
-                currentOrder.Add(new BleakwindBuffet.Data.Entrees.BriarheartBurger());
-                Ancestor.SwitchScreen(Screen.MenuChooser);
-            }
-        }
-
+        
         /// <summary>
         /// Button to go back to main screen
         /// </summary>

@@ -38,28 +38,8 @@ namespace PointOfSale.DrinkCustom
         {
             InitializeComponent();
             this.Ancestor = ancestor;
-            this.DataContext = new BleakwindBuffet.Data.Drinks.MarkarthMilk();
+            //this.DataContext = new BleakwindBuffet.Data.Drinks.MarkarthMilk();
 
-        }
-        /*
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void CheckBox1_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-        */
-        /// <summary>
-        /// Button to add item to order and go back to main screen
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void AddToOrderButton_Click_1(object sender, RoutedEventArgs e)
-        {
-            Ancestor.SwitchScreen(Screen.MenuChooser);
         }
 
         /// <summary>
