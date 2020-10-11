@@ -38,7 +38,7 @@ namespace PointOfSale.EntreeCustom
         {
             InitializeComponent();
             this.Ancestor = ancestor;
-            this.DataContext = new BleakwindBuffet.Data.Entrees.BriarheartBurger();
+            //this.DataContext = new BleakwindBuffet.Data.Entrees.BriarheartBurger();
 
         }
 
@@ -49,7 +49,11 @@ namespace PointOfSale.EntreeCustom
         /// <param name="e"></param>
         private void AddToOrderButton_Click_1(object sender, RoutedEventArgs e)
         {
-            Ancestor.SwitchScreen(Screen.MenuChooser);
+            if (DataContext is BleakwindBuffet.Data.Order currentOrder)
+            {
+                currentOrder.Add(new BleakwindBuffet.Data.Entrees.BriarheartBurger());
+                Ancestor.SwitchScreen(Screen.MenuChooser);
+            }
         }
 
         /// <summary>

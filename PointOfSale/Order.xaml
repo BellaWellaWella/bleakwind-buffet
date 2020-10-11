@@ -7,15 +7,41 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="200">
     <DockPanel>
-        <TextBox Name="OrderNumBox" Text="Order # "  DockPanel.Dock="Top" FontWeight="Bold" TextAlignment="Center" FontSize="20"/>
-        <Grid DockPanel.Dock="Bottom">
-            <TextBox Name="CalorieTextBox" Text="Calories" FontSize="20" />
+        <Grid DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBox Name="OrderNumTextBox" Text="Order #"  DockPanel.Dock="Top" FontWeight="Bold" TextAlignment="Center" FontSize="20"/>
+            <TextBox Name="OrderNumNumBox" Text="{Binding Path=Number, Mode=OneWay}"  DockPanel.Dock="Top" FontWeight="Bold" TextAlignment="Center" Grid.Column="1" FontSize="20"/>
         </Grid>
-        <TextBox Name ="TotalBox" DockPanel.Dock="Bottom" Text="Total" FontSize="20" FontWeight="Bold"/>
-        <TextBox Name ="TaxBox" DockPanel.Dock="Bottom"  Text="Tax" FontSize="20" />
-        <TextBox Name ="SubtotalBox" DockPanel.Dock="Bottom" Text="Subtotal" FontSize="20" />
+        
+        <Grid DockPanel.Dock="Bottom" Height="126">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBox Name="CalorieTextBox" Text="Calories" Grid.Column="0" Grid.Row="0" FontSize="20" />
+            <TextBox Name ="TotalTextBox" Text="Total"  Grid.Column="0" Grid.Row="1" FontSize="20"/>
+            <TextBox Name ="TaxTextBox" Text="Tax"  Grid.Column="0" Grid.Row="2" FontSize="20" />
+            <TextBox Name ="SubtotalTextBox" Text="Subtotal"  Grid.Column="0" Grid.Row="3" FontSize="20"/>
+            <TextBox Name="CalorieNumbertBox" Text="{Binding Path=TotalCalories, Mode=OneWay}"  Grid.Column="1" Grid.Row="0" FontSize="20" />
+            <TextBox Name ="TotalNumberBox" Text="{Binding Path=Total, Mode=OneWay}" FontSize="20"  Grid.Column="1" Grid.Row="1" />
+            <TextBox Name ="TaxNumberBox" Text="{Binding Path=Tax, Mode=OneWay}" FontSize="20"  Grid.Column="1" Grid.Row="2" />
+            <TextBox Name ="SubtotalNumberBox" Text="{Binding Path=Subtotal, Mode=OneWay}" FontSize="20" Grid.Column="1" Grid.Row="3" />
+        </Grid>
 
-        <ListView Name="orderList" Height="457" Width="200" >
+        <Button DockPanel.Dock="Bottom" Height="50" Name="AddToOrderButton">
+
+        </Button>
+
+        <ListView Name="orderList" Height="447" Width="200" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>

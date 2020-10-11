@@ -54,13 +54,8 @@ namespace PointOfSale
         /// <param name="e"></param>
         public void BriarheartBurgerButton_Click(object sender, RoutedEventArgs e)
         {
-            if(DataContext is BleakwindBuffet.Data.Order currentOrder)
-            {
-                currentOrder.Add(new BriarheartBurger());
-                Ancestor.SwitchScreen(Screen.BriarheartBurger);
-            }
-            
-            
+            Ancestor.SwitchScreen(Screen.BriarheartBurger);
+
         }
 
         /// <summary>
