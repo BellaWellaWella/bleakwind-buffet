@@ -234,17 +234,17 @@ namespace BleakwindBuffet.Data
                 array[i + arrayIndex] = orderItems[i];
             }
         }
-
+        
         public IEnumerator<IOrderItem> GetEnumerator()
         {
-            throw new NotImplementedException();    
+            return orderItems.GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return orderItems.GetEnumerator();
         }
-
+        
         private void ItemEventChange(object sender, PropertyChangedEventArgs e)
         {
             if(e.PropertyName == "Price")
