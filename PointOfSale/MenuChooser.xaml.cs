@@ -39,7 +39,7 @@ namespace PointOfSale
         /// </summary>
         public Controller Ancestor { get; set; }
 
-        public static Screen currentScreen;
+        //public static Screen currentScreen;
 
 
         /// <summary>
@@ -59,9 +59,13 @@ namespace PointOfSale
         public void BriarheartBurgerButton_Click(object sender, RoutedEventArgs e)
         {
             if (DataContext is BleakwindBuffet.Data.Order currentOrder)
-            { currentOrder.Add(new BleakwindBuffet.Data.Entrees.BriarheartBurger()); }
-            currentScreen = Screen.BriarheartBurger;
-            Ancestor.SwitchScreen(Screen.BriarheartBurger);
+            { 
+                BriarheartBurger bb = new BriarheartBurger();
+                currentOrder.Add(bb);
+                var screen = Ancestor.SwitchScreen(Screen.BriarheartBurger);
+                screen.DataContext = bb;
+            }
+            
         }
 
         /// <summary>
@@ -72,9 +76,12 @@ namespace PointOfSale
         private void WarriorWaterButton_Click(object sender, RoutedEventArgs e)
         {
             if (DataContext is BleakwindBuffet.Data.Order currentOrder)
-            { currentOrder.Add(new BleakwindBuffet.Data.Drinks.WarriorWater()); }
-            currentScreen = Screen.WarriorWater;
-            Ancestor.SwitchScreen(Screen.WarriorWater);
+            {
+                WarriorWater ww = new WarriorWater();
+                currentOrder.Add(ww);
+                var screen = Ancestor.SwitchScreen(Screen.WarriorWater);
+                screen.DataContext = ww;
+            }
 
 
         }
@@ -87,9 +94,12 @@ namespace PointOfSale
         private void SailorsSodaButton_Click(object sender, RoutedEventArgs e)
         {
             if (DataContext is BleakwindBuffet.Data.Order currentOrder)
-            { currentOrder.Add(new BleakwindBuffet.Data.Drinks.SailorSoda()); }
-            currentScreen = Screen.SailorsSoda;
-            Ancestor.SwitchScreen(Screen.SailorsSoda);
+            {
+                SailorSoda ss = new SailorSoda();
+                currentOrder.Add(ss);
+                var screen = Ancestor.SwitchScreen(Screen.SailorsSoda);
+                screen.DataContext = ss;
+            }
 
         }
 
@@ -101,9 +111,12 @@ namespace PointOfSale
         private void MarkarthMilkButton_Click(object sender, RoutedEventArgs e)
         {
             if (DataContext is BleakwindBuffet.Data.Order currentOrder)
-            { currentOrder.Add(new BleakwindBuffet.Data.Drinks.MarkarthMilk()); }
-            currentScreen = Screen.MarkarthMilk;
-            Ancestor.SwitchScreen(Screen.MarkarthMilk);
+            {
+                MarkarthMilk mm = new MarkarthMilk();
+                currentOrder.Add(mm);
+                var screen = Ancestor.SwitchScreen(Screen.MarkarthMilk);
+                screen.DataContext = mm;
+            }
 
         }
 
@@ -115,9 +128,12 @@ namespace PointOfSale
         private void CandlehearthCoffeeButton_Click(object sender, RoutedEventArgs e)
         {
             if (DataContext is BleakwindBuffet.Data.Order currentOrder)
-            { currentOrder.Add(new BleakwindBuffet.Data.Drinks.CandlehearthCoffee()); }
-            currentScreen = Screen.CandlehearthCoffee;
-            Ancestor.SwitchScreen(Screen.CandlehearthCoffee);
+            {
+                CandlehearthCoffee cc = new CandlehearthCoffee();
+                currentOrder.Add(cc);
+                var screen = Ancestor.SwitchScreen(Screen.CandlehearthCoffee);
+                screen.DataContext = cc;
+            }
         }
 
         /// <summary>
@@ -128,9 +144,12 @@ namespace PointOfSale
         private void AretinoAppleJuiceButton_Click(object sender, RoutedEventArgs e)
         {
             if (DataContext is BleakwindBuffet.Data.Order currentOrder)
-            { currentOrder.Add(new BleakwindBuffet.Data.Drinks.AretinoAppleJuice()); }
-            currentScreen = Screen.AretinoAppleJuice;
-            Ancestor.SwitchScreen(Screen.AretinoAppleJuice);
+            {
+                AretinoAppleJuice aa = new AretinoAppleJuice();
+                currentOrder.Add(aa);
+                var screen = Ancestor.SwitchScreen(Screen.AretinoAppleJuice);
+                screen.DataContext = aa;
+            }
 
         }
 
@@ -142,9 +161,12 @@ namespace PointOfSale
         private void DragonbornWaffleFriesButton_Click(object sender, RoutedEventArgs e)
         {
             if (DataContext is BleakwindBuffet.Data.Order currentOrder)
-            { currentOrder.Add(new BleakwindBuffet.Data.Sides.DragonbornWaffleFries()); }
-            currentScreen = Screen.DragonbornWaffleFries;
-            Ancestor.SwitchScreen(Screen.DragonbornWaffleFries);
+            {
+                DragonbornWaffleFries dw = new DragonbornWaffleFries();
+                currentOrder.Add(dw);
+                var screen = Ancestor.SwitchScreen(Screen.DragonbornWaffleFries);
+                screen.DataContext = dw;
+            };
         }
 
         /// <summary>
@@ -155,9 +177,12 @@ namespace PointOfSale
         private void FriedMirrakButton_Click(object sender, RoutedEventArgs e)
         {
             if (DataContext is BleakwindBuffet.Data.Order currentOrder)
-            { currentOrder.Add(new BleakwindBuffet.Data.Sides.FriedMiraak()); }
-            currentScreen = Screen.FriedMiraak;
-            Ancestor.SwitchScreen(Screen.FriedMiraak);
+            {
+                FriedMiraak fm = new FriedMiraak();
+                currentOrder.Add(fm);
+                var screen = Ancestor.SwitchScreen(Screen.FriedMiraak);
+                screen.DataContext = fm;
+            }
         }
 
         /// <summary>
@@ -168,9 +193,12 @@ namespace PointOfSale
         private void MadOtarGritsButton_Click(object sender, RoutedEventArgs e)
         {
             if (DataContext is BleakwindBuffet.Data.Order currentOrder)
-            { currentOrder.Add(new BleakwindBuffet.Data.Sides.MadOtarGrits()); }
-            currentScreen = Screen.MadOtarGrits;
-            Ancestor.SwitchScreen(Screen.MadOtarGrits);
+            {
+                MadOtarGrits mo = new MadOtarGrits();
+                currentOrder.Add(mo);
+                var screen = Ancestor.SwitchScreen(Screen.MadOtarGrits);
+                screen.DataContext = mo;
+            }
         }
 
         /// <summary>
@@ -181,9 +209,12 @@ namespace PointOfSale
         private void VokunSaladButton_Click(object sender, RoutedEventArgs e)
         {
             if (DataContext is BleakwindBuffet.Data.Order currentOrder)
-            { currentOrder.Add(new BleakwindBuffet.Data.Sides.VokunSalad()); }
-            currentScreen = Screen.VokunSalad;
-            Ancestor.SwitchScreen(Screen.VokunSalad);
+            {
+                VokunSalad vs = new VokunSalad();
+                currentOrder.Add(vs);
+                var screen = Ancestor.SwitchScreen(Screen.VokunSalad);
+                screen.DataContext = vs;
+            }
         }
 
         /// <summary>
@@ -194,9 +225,12 @@ namespace PointOfSale
         private void DoubleDraugrButton_Click(object sender, RoutedEventArgs e)
         {
             if (DataContext is BleakwindBuffet.Data.Order currentOrder)
-            { currentOrder.Add(new BleakwindBuffet.Data.Entrees.DoubleDraugr()); }
-            currentScreen = Screen.DoubleDraugr;
-            Ancestor.SwitchScreen(Screen.DoubleDraugr);
+            {
+                DoubleDraugr dd = new DoubleDraugr();
+                currentOrder.Add(dd);
+                var screen = Ancestor.SwitchScreen(Screen.DoubleDraugr);
+                screen.DataContext = dd;
+            }
         }
 
         /// <summary>
@@ -207,9 +241,12 @@ namespace PointOfSale
         private void ThalmorTripleButton_Click(object sender, RoutedEventArgs e)
         {
             if (DataContext is BleakwindBuffet.Data.Order currentOrder)
-            { currentOrder.Add(new BleakwindBuffet.Data.Entrees.ThalmorTriple()); }
-            currentScreen = Screen.ThalmorTriple;
-            Ancestor.SwitchScreen(Screen.ThalmorTriple);
+            {
+                ThalmorTriple tt = new ThalmorTriple();
+                currentOrder.Add(tt);
+                var screen = Ancestor.SwitchScreen(Screen.ThalmorTriple);
+                screen.DataContext = tt;
+            }
         }
 
         /// <summary>
@@ -220,9 +257,12 @@ namespace PointOfSale
         private void GardenOrcOmeletteButton_Click(object sender, RoutedEventArgs e)
         {
             if (DataContext is BleakwindBuffet.Data.Order currentOrder)
-            { currentOrder.Add(new BleakwindBuffet.Data.Entrees.GardenOrcOmelette()); }
-            currentScreen = Screen.GardenOrcOmelette;
-            Ancestor.SwitchScreen(Screen.GardenOrcOmelette);
+            {
+                GardenOrcOmelette go = new GardenOrcOmelette();
+                currentOrder.Add(go);
+                var screen = Ancestor.SwitchScreen(Screen.GardenOrcOmelette);
+                screen.DataContext = go;
+            }
         }
 
         /// <summary>
@@ -233,9 +273,12 @@ namespace PointOfSale
         private void PhillyPoacherButton_Click(object sender, RoutedEventArgs e)
         {
             if (DataContext is BleakwindBuffet.Data.Order currentOrder)
-            { currentOrder.Add(new BleakwindBuffet.Data.Entrees.PhillyPoacher()); }
-            currentScreen = Screen.PhillyPoacher;
-            Ancestor.SwitchScreen(Screen.PhillyPoacher);
+            {
+                PhillyPoacher pp = new PhillyPoacher();
+                currentOrder.Add(pp);
+                var screen = Ancestor.SwitchScreen(Screen.PhillyPoacher);
+                screen.DataContext = pp;
+            }
         }
 
         /// <summary>
@@ -246,9 +289,12 @@ namespace PointOfSale
         private void SmokehouseSkeletonButton_Click(object sender, RoutedEventArgs e)
         {
             if (DataContext is BleakwindBuffet.Data.Order currentOrder)
-            { currentOrder.Add(new BleakwindBuffet.Data.Entrees.SmokehouseSkeleton()); }
-            currentScreen = Screen.SmokehouseSkeleton;
-            Ancestor.SwitchScreen(Screen.SmokehouseSkeleton);
+            {
+                SmokehouseSkeleton ss = new SmokehouseSkeleton();
+                currentOrder.Add(ss);
+                var screen = Ancestor.SwitchScreen(Screen.SmokehouseSkeleton);
+                screen.DataContext = ss;
+            }
         }
 
         /// <summary>
@@ -259,16 +305,18 @@ namespace PointOfSale
         private void ThugsTBoneButton_Click(object sender, RoutedEventArgs e)
         {
             if (DataContext is BleakwindBuffet.Data.Order currentOrder)
-            { currentOrder.Add(new BleakwindBuffet.Data.Entrees.ThugsTBone()); }
-            currentScreen = Screen.ThugsTBone;
-            Ancestor.SwitchScreen(Screen.ThugsTBone);
+            {
+                ThugsTBone tt = new ThugsTBone();
+                currentOrder.Add(tt);
+                var screen = Ancestor.SwitchScreen(Screen.ThugsTBone);
+                screen.DataContext = tt;
+            }
 
         }
 
         private void ClearButton_Click(object sender, RoutedEventArgs e)
         {
-            Ancestor.DataContext = new BleakwindBuffet.Data.Order();
-            
+            Ancestor.DataContext = new BleakwindBuffet.Data.Order();   
         }
     }
 }

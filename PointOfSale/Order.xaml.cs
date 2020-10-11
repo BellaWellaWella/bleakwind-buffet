@@ -39,11 +39,18 @@ namespace PointOfSale
             
         }
 
-
+        /// <summary>
+        /// Code-behind for the remove function from the button. You have to select the item, and then hit remove for it to remove
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RemoveButton_Click(object sender, RoutedEventArgs e)
         {
             if (DataContext is BleakwindBuffet.Data.Order currentOrder)
-            { currentOrder.Remove((IOrderItem)orderList.SelectedItem); }
+            { 
+                currentOrder.Remove((IOrderItem) orderList.SelectedItem);
+                
+            }
         }
     }
 }

@@ -72,6 +72,7 @@ namespace BleakwindBuffet.Data
         {
             get
             {
+                subtotal = 0;
                 foreach(IOrderItem item in orderItems)
                 {
                     subtotal += item.Price;
@@ -88,7 +89,6 @@ namespace BleakwindBuffet.Data
         {
             get
             {
-
                 tax = Subtotal * SalesTaxRate;
                 return tax;
             }
@@ -115,6 +115,7 @@ namespace BleakwindBuffet.Data
         {
             get
             {
+                totalCalories = 0;
                 foreach(IOrderItem item in orderItems)
                 {
                     totalCalories += item.Calories;
@@ -162,12 +163,13 @@ namespace BleakwindBuffet.Data
         public void Add(IOrderItem item)
         {
             orderItems.Add(item);
-            
+            var index = orderItems.IndexOf(item);
+
             OnPropertyChanged("Subtotal");
             OnPropertyChanged("Tax");
             OnPropertyChanged("Total");
             OnPropertyChanged("TotalCalories");
-            OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, orderItems));
+            OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, item, index));
             item.PropertyChanged += ItemEventChange;
         }
 
@@ -180,8 +182,9 @@ namespace BleakwindBuffet.Data
         {
             if (orderItems.Contains(item))
             {
+                var index = orderItems.IndexOf(item);
                 orderItems.Remove(item);
-                OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Remove, orderItems));
+                OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Remove, item, index));
                 OnPropertyChanged("Subtotal");
                 OnPropertyChanged("Tax");
                 OnPropertyChanged("Total");

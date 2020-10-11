@@ -20,6 +20,8 @@ namespace BleakwindBuffet.DataTests
 {
     public class OrderTests
     {
+
+
         [Fact]
         public void ShouldBeAIPropChangedItem()
         {
@@ -148,20 +150,6 @@ namespace BleakwindBuffet.DataTests
                 o.Remove(b);
             });
         }
-        /*
-        [Fact]
-        public void RemovingItemNotifiesCollectionChanged()
-        {
-            Order o = new Order();
-            BriarheartBurger b = new BriarheartBurger();
-            o.Add(b);
-
-            Assert.col
-            Assert.Coll(o, "Calories", () =>
-            {
-                o.Remove(b);
-            });
-        }
-        */
+        
     }
 }

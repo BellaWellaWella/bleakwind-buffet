@@ -70,9 +70,10 @@ namespace PointOfSale
         /// Switches the displayed screen
         /// </summary>
         /// <param name="screen">The identity of the screen to show</param>
-        public void SwitchScreen(Screen screen)
+        public FrameworkElement SwitchScreen(Screen screen)
         {
             switchableContent.Child = screens[screen];
+            return screens[screen];
         }
 
         //ignore
