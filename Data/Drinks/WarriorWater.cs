@@ -17,6 +17,9 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class WarriorWater : Drink, INotifyPropertyChanged 
     {
+        /// <summary>
+        /// Constructor for Warrior Water
+        /// </summary>
         public WarriorWater()
         {
             this.Ice = true;
@@ -25,41 +28,7 @@ namespace BleakwindBuffet.Data.Drinks
 
         }
 
-        /// <summary>
-        /// Declaring the event handler for PropertyChanged
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// method for on property changed
-        /// </summary>
-        /// <param name="propertyName">the property that is changing</param>
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        /// <summary>
-        /// private backing variable for size
-        /// </summary>
-        private Size size = Size.Small;
-
-        /// <summary>
-        /// gets & sets size
-        /// </summary>
-        public override Size Size
-        {
-            get { return size; }
-            set
-            {
-                size = value;
-                OnPropertyChanged("Size");
-                OnPropertyChanged("Calories");
-                OnPropertyChanged("Price");
-            }
-        }
-
-
+        
         /// <value>
         /// gets & sets the ice preference
         /// </value>

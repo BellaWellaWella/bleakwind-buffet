@@ -21,50 +21,21 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class AretinoAppleJuice : Drink, INotifyPropertyChanged
     {
-        
+       
+        /// <summary>
+        /// Constructor for Arentino Apple Juice
+        /// </summary>
         public AretinoAppleJuice()
         {
             this.Ice = false;
             this.Size = Size.Small;
         }
-        /// <summary>
-        /// declaring the event handler for PropertyChanged
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// method to handle if the property changed
-        /// </summary>
-        /// <param name="propertyName"> the property that is being changed</param>
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        //private backing variable for size
-        private Size size = Size.Small;
-
-        /// <summary>
-        /// gets & sets the size preference
-        /// </summary>
-        public override Size Size
-        {
-            get { return size; }
-            set { size = value;
-                OnPropertyChanged("Calories");
-                OnPropertyChanged("Price");
-                OnPropertyChanged("Size");
-            }
-        }
-
-
+        
 
         /// <value>
         /// gets & sets the ice preference
         /// </value>
-
         private bool ice = false;
-
         public bool Ice
         {
             get { return ice; }

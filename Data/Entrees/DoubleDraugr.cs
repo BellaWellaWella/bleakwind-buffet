@@ -31,20 +31,6 @@ namespace BleakwindBuffet.Data.Entrees
             this.Mayo = true;
         }
 
-        /// <summary>
-        /// Declares the event handler for PropertyChanged
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// method to handle if the property changed
-        /// </summary>
-        /// <param name="propertyName"> the property that is being changed</param>
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
         /// <value>
         /// Gets the Price of the burger
         /// </value>
@@ -177,8 +163,6 @@ namespace BleakwindBuffet.Data.Entrees
                 OnPropertyChanged("SpecialInstructions");
             }
         }
-
-
 
         /// <value>
         /// sets up the special instructions

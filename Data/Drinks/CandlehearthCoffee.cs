@@ -18,6 +18,9 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class CandlehearthCoffee : Drink, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Constructor for Candlehearth Coffee
+        /// </summary>
         public CandlehearthCoffee()
         {
             this.Ice = false;
@@ -26,46 +29,9 @@ namespace BleakwindBuffet.Data.Drinks
             this.Size = Size.Small;
         }
 
-        /// <summary>
-        /// Declaring the event handler for PropertyChanged
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// method to handle property change
-        /// </summary>
-        /// <param name="propertyName">the property that is being changed</param>
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        /// <summary>
-        /// private backing variable for size
-        /// </summary>
-        private Size size = Size.Small;
-
-        /// <summary>
-        /// gets & sets the size preference
-        /// </summary>
-        public override Size Size
-        {
-            get { return size; }
-            set
-            {
-                size = value;
-                OnPropertyChanged("Calories");
-                OnPropertyChanged("Price");
-                OnPropertyChanged("Size");
-
-            }
-        }
-
-
         /// <value>
         /// gets & sets the ice preference
         /// </value>
-
         private bool ice = false;
 
         public bool Ice
@@ -80,8 +46,10 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        /// <summary>
+        /// Gets the cream preference
+        /// </summary>
         private bool roomForCream = false;
-
         public bool RoomForCream
         {
             get { return roomForCream; }
@@ -91,8 +59,10 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        /// <summary>
+        /// Gets the caffine preference
+        /// </summary>
         private bool decaf = false;
-
         public bool Decaf
         {
             get { return decaf; }

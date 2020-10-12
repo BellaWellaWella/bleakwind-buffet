@@ -26,19 +26,6 @@ namespace BleakwindBuffet.Data.Entrees
             this.Onion = true;
             this.Roll = true;
         }
-        /// <summary>
-        /// declares the event handler  for PropertyChanged
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// method for when the property changes
-        /// </summary>
-        /// <param name="propertyName"></param>
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
 
         /// <value>
         /// Gets the Price of the burger

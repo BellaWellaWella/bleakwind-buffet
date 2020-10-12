@@ -19,47 +19,14 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class MarkarthMilk : Drink, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Constructor for Markarth Milk
+        /// </summary>
         public MarkarthMilk()
         {
             this.Ice = false;
             this.Size = Size.Small;
         }
-
-        /// <summary>
-        /// Declaring the event handler for PropertyChanged
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// method to handle the property change
-        /// </summary>
-        /// <param name="propertyName">the property that is being changed</param>
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        /// <summary>
-        /// private backing variable for size
-        /// </summary>
-        private Size size = Size.Small;
-
-        /// <summary>
-        /// gets & sets the size preference
-        /// </summary>
-        public override Size Size
-        {
-            get { return size; }
-            set
-            {
-                size = value;
-                OnPropertyChanged("Calories");
-                OnPropertyChanged("Price");
-                OnPropertyChanged("Size");
-
-            }
-        }
-
 
         /// <value>
         /// gets & sets the ice preference

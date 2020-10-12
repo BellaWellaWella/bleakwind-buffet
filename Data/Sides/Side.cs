@@ -16,10 +16,24 @@ namespace BleakwindBuffet.Data.Sides
     /// </summary>
     public abstract class Side : IOrderItem
     {
+        //private backing variable for size
+        private Size size = Size.Small;
+
         /// <summary>
-        /// The size of the drink
+        /// gets & sets the size preference
         /// </summary>
-        public virtual Size Size { get; set; }
+        public Size Size
+        {
+            get { return size; }
+            set
+            {
+                size = value;
+                OnPropertyChanged("Calories");
+                OnPropertyChanged("Price");
+                OnPropertyChanged("Size");
+                OnPropertyChanged("Name");
+            }
+        }
 
         /// <summary>
         /// The price of the drink
@@ -37,6 +51,29 @@ namespace BleakwindBuffet.Data.Sides
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
 
+        /// <summary>
+        /// Event handler for property changed
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// method to handle if the property changed
+        /// </summary>
+        /// <param name="propertyName"> the property that is being changed</param>
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        /// <summary>
+        /// Method to return name in order to display updated size
+        /// </summary>
+        public string Name
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
     }
 }

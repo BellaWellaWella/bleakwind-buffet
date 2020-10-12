@@ -32,6 +32,29 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
 
+        /// <summary>
+        /// Declaring the event handler for PropertyChanged
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// method to handle if the property changed
+        /// </summary>
+        /// <param name="propertyName"> the property that is being changed</param>
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        /// <summary>
+        /// Method to return name in order to display updated size
+        /// </summary>
+        public string Name
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
     }
 }

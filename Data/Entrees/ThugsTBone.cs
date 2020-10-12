@@ -21,21 +21,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public ThugsTBone()
         {
-
-        }
-
-        /// <summary>
-        /// Declaring the event handler for PropertyChanged
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// method for when the property changes
-        /// </summary>
-        /// <param name="propertyName"></param>
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            //no properties to set at the moment
         }
 
         /// <value>

@@ -27,38 +27,6 @@ namespace BleakwindBuffet.Data.Sides
             this.Size = Size.Small;
         }
 
-        /// <summary>
-        /// PropertyChanged event handler
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// method to handle if the property changed
-        /// </summary>
-        /// <param name="propertyName"> the property that is being changed</param>
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        //private backing variable for size
-        private Size size = Size.Small;
-
-        /// <summary>
-        /// gets & sets the size preference
-        /// </summary>
-        public override Size Size
-        {
-            get { return size; }
-            set
-            {
-                size = value;
-                OnPropertyChanged("Calories");
-                OnPropertyChanged("Price");
-                OnPropertyChanged("Size");
-            }
-        }
-
         /// <value>
         /// gives the calories based on size
         /// </value>

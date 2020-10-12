@@ -17,6 +17,9 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class SailorSoda : Drink, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Constructor for Sailor soda
+        /// </summary>
         public SailorSoda()
         {
             this.Ice = true;
@@ -24,42 +27,7 @@ namespace BleakwindBuffet.Data.Drinks
             this.Size = Size.Small;
         }
 
-        /// <summary>
-        /// Declaring the event handler for PropertyChanged
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-
-        /// <summary>
-        /// method for on property change
-        /// </summary>
-        /// <param name="propertyName"> the property that is changed</param>
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        /// <summary>
-        /// private backing variable for size
-        /// </summary>
-        private Size size = Size.Small;
-
-        /// <summary>
-        /// gets & sets size
-        /// </summary>
-        public override Size Size
-        {
-            get { return size; }
-            set
-            {
-                size = value;
-                OnPropertyChanged("Calories");
-                OnPropertyChanged("Price");
-                OnPropertyChanged("Size");
-            }
-        }
-
-
+       
         /// <value>
         /// gets & sets the ice preference
         /// </value>
@@ -89,7 +57,7 @@ namespace BleakwindBuffet.Data.Drinks
 
             set { flavor = value;
                 OnPropertyChanged("Flavor");
-                OnPropertyChanged("SpecialInstructions");
+                OnPropertyChanged("Name");
             }
         }
 

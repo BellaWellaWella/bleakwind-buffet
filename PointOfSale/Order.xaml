@@ -50,7 +50,7 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock Text="{Binding}" FontWeight="Bold" Grid.Row="0" />
+                        <TextBlock Text="{Binding Path=Name}" FontWeight="Bold" Grid.Row="0" />
                         <ListBox ItemsSource="{Binding Path=SpecialInstructions}" Grid.Row="1"/>
                         <Button x:Name="removeButton" Content="Remove Item" Grid.Row="2" Click="RemoveButton_Click"/>
                     </Grid>

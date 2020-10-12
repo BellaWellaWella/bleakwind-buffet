@@ -28,20 +28,6 @@ namespace BleakwindBuffet.Data.Entrees
             this.Cheese = true;
         }
 
-        /// <summary>
-        /// Declaring the event handler for PropertyChanged
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// method to handle if the property changed
-        /// </summary>
-        /// <param name="propertyName"> the property that is being changed</param>
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
         /// <value>
         /// Gets the Price of the burger
         /// </value>
@@ -113,9 +99,6 @@ namespace BleakwindBuffet.Data.Entrees
         }
 
         private bool cheese = true;
-
-        
-
         /// <value>
         /// gets & sets the cheese preference
         /// </value>

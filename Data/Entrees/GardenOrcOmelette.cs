@@ -27,20 +27,6 @@ namespace BleakwindBuffet.Data.Entrees
             this.Cheddar = true;
         }
 
-        /// <summary>
-        /// Declaring the event handler  for PropertyChanged
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// method for when the property changes
-        /// </summary>
-        /// <param name="propertyName"></param>
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
         /// <value>
         /// Gets the Price of the omelette
         /// </value>
