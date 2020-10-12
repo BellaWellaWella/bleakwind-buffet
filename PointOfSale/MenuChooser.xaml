@@ -60,5 +60,8 @@
         </Button>
         <Button Grid.Row="6" Grid.Column="1" IsEnabled="True" Name="CheckoutButton" Content="Checkout" FontSize="20" Background="LawnGreen">
         </Button>
+
+        <Button Grid.Row="5" Grid.Column="1" IsEnabled="True" Name="ComboButton" Content="Create a Combo" FontSize="20" Background="Lavender" Click="ComboButton_Click">
+        </Button>
     </Grid>
 </UserControl>

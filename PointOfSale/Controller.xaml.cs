@@ -58,6 +58,7 @@ namespace PointOfSale
             screens.Add(Screen.GardenOrcOmelette, new EntreeCustom.GardenOrcOmelette(this));
             screens.Add(Screen.PhillyPoacher, new EntreeCustom.PhillyPoacher(this));
             screens.Add(Screen.ThugsTBone, new EntreeCustom.ThugsTBone(this));
+            screens.Add(Screen.Combo, new Combo(this));
 
             //Order mainOrder = new Order();
 

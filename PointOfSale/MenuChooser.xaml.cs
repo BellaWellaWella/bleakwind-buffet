@@ -318,5 +318,17 @@ namespace PointOfSale
         {
             Ancestor.DataContext = new BleakwindBuffet.Data.Order();   
         }
+
+        private void ComboButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is BleakwindBuffet.Data.Order currentOrder)
+            {
+                BleakwindBuffet.Data.Combo c = new BleakwindBuffet.Data.Combo();
+                currentOrder.Add(c);
+                var screen = Ancestor.SwitchScreen(Screen.Combo);
+                screen.DataContext = c;
+            }
+
+        }
     }
 }

@@ -1,17 +1,4 @@
-﻿/*
- * 
- * Author: Bella Goddard
- * Class: AretinoAppleJuice.xaml.cs
- * 
- * The purpose of this class is to provide the back code for the aretino apple juice choices screen
- * 
- * 
- * 
-*/
-using BleakwindBuffet.Data;
-using BleakwindBuffet.Data.Drinks;
-using BleakwindBuffet.Data.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -23,29 +10,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Xps.Packaging;
 
-namespace PointOfSale.DrinkCustom
+namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for AretinoAppleJuice.xaml
+    /// Interaction logic for Combo.xaml
     /// </summary>
-    public partial class AretinoAppleJuice : UserControl
+    public partial class Combo : UserControl
     {
         Controller Ancestor;
 
-        /// <summary>
-        /// the constructor for ItemCustom
-        /// </summary>
-        /// <param name="ancestor"> the ancestor to pass in</param>
-        public AretinoAppleJuice(Controller ancestor)
+        public Combo(Controller ancestor)
         {
             InitializeComponent();
             this.Ancestor = ancestor;
-            //this.DataContext = new BleakwindBuffet.Data.Drinks.AretinoAppleJuice();
-
         }
-
 
         /// <summary>
         /// Button to go back to main screen
@@ -56,7 +35,5 @@ namespace PointOfSale.DrinkCustom
         {
             Ancestor.SwitchScreen(Screen.MenuChooser);
         }
-
-       
     }
 }

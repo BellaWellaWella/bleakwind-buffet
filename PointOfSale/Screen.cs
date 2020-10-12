@@ -36,6 +36,7 @@ namespace PointOfSale
         SmokehouseSkeleton,
         GardenOrcOmelette,
         PhillyPoacher,
-        ThugsTBone
+        ThugsTBone,
+        Combo
     }
 }

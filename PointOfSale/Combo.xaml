@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="PointOfSale.Combo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600">
+     <Grid Background="LightSalmon">
+        <!-- Change button names & visibility based off of click from menu chooser-->
+        <TextBox Name ="Name" HorizontalAlignment="Center" Height="30" Margin="0,44,0,0" Text="Create a Combo" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"  TextAlignment="Center" FontSize="20"/>
+        <ComboBox Name="EntreeComboBox" HorizontalAlignment="Left" Margin="70,134,0,0" VerticalAlignment="Top" Width="120" Visibility="Visible">
+            <ComboBoxItem Content="Briarheart Burger"/>
+            <ComboBoxItem Content="Double Draugr"/>
+            <ComboBoxItem Content="Garden Orc Omelette"/>
+            <ComboBoxItem Content="Philly Poacher"/>
+            <ComboBoxItem Content="Smokehouse Skeleton"/>
+            <ComboBoxItem Content="Thalmor Triple"/>
+            <ComboBoxItem Content="Thugs T-Bone"/>
+        </ComboBox>
+        <ComboBox Name="SideComboBox" HorizontalAlignment="Left" Margin="245,134,0,0" VerticalAlignment="Top" Width="120" Visibility="Visible">
+            <ComboBoxItem Content="Dragonborn Waffle Fries"/>
+            <ComboBoxItem Content="Fried Miraak"/>
+            <ComboBoxItem Content="Mad Otar Grits"/>
+            <ComboBoxItem Content="Vokun Salad"/>
+        </ComboBox>
+        <ComboBox Name="DrinkComboBox" HorizontalAlignment="Left" Margin="420,134,0,0" VerticalAlignment="Top" Width="120" Visibility="Visible">
+            <ComboBoxItem Content="Aretino Apple Juice"/>
+            <ComboBoxItem Content="Candlehearth Coffee"/>
+            <ComboBoxItem Content="Markarth Milk"/>
+            <ComboBoxItem Content="Sailors Soda"/>
+            <ComboBoxItem Content="Warrior Water"/>
+        </ComboBox>
+        <Label Content="Entree:" FontSize="15" Margin="65,105,0,0"/>
+        <Label Content="Side:" FontSize="15" Margin="240,105,0,0"/>
+        <Label Content="Drink:" FontSize="15" Margin="415,105,0,0"/>
+
+        <Button Name="BackButton" Content="Back" HorizontalAlignment="Left" Margin="520,400,0,0" Width="70" FontSize="20" Height="40" VerticalAlignment="Top" Click="BackButton_Click"/>
+        <Label Content="{Binding Path=Price}" HorizontalAlignment="Left" Margin="425,245,0,0" VerticalAlignment="Top" FontSize="20px"/>
+        <Label Content="Price:      $" HorizontalAlignment="Left" Margin="334,245,0,0" VerticalAlignment="Top" FontSize="20px"/>
+        <Label Content="{Binding Path=Calories}" HorizontalAlignment="Left" Margin="424,275,0,0" VerticalAlignment="Top" FontSize="20px"/>
+        <Label Content="Calories:" HorizontalAlignment="Left" Margin="334,275,0,0" VerticalAlignment="Top" FontSize="20px"/>
+
+    </Grid>
+</UserControl>
