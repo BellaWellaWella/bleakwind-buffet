@@ -324,6 +324,9 @@ namespace PointOfSale
             if (DataContext is BleakwindBuffet.Data.Order currentOrder)
             {
                 BleakwindBuffet.Data.Combo c = new BleakwindBuffet.Data.Combo();
+                c.Entree = new BriarheartBurger();
+                c.Drink = new WarriorWater();
+                c.Side = new DragonbornWaffleFries();
                 currentOrder.Add(c);
                 var screen = Ancestor.SwitchScreen(Screen.Combo);
                 screen.DataContext = c;

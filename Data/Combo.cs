@@ -167,5 +167,14 @@ namespace BleakwindBuffet.Data
             }
         }
 
+        /// <summary>
+        /// ToString for Combo
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return ("Combo");
+        }
+
     }
 }

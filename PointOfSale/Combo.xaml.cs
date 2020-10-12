@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data.Entrees;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -24,6 +26,7 @@ namespace PointOfSale
         {
             InitializeComponent();
             this.Ancestor = ancestor;
+            
         }
 
         /// <summary>

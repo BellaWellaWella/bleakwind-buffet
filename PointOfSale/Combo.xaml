@@ -9,22 +9,22 @@
      <Grid Background="LightSalmon">
         <!-- Change button names & visibility based off of click from menu chooser-->
         <TextBox Name ="Name" HorizontalAlignment="Center" Height="30" Margin="0,44,0,0" Text="Create a Combo" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"  TextAlignment="Center" FontSize="20"/>
-        <ComboBox Name="EntreeComboBox" HorizontalAlignment="Left" Margin="70,134,0,0" VerticalAlignment="Top" Width="120" Visibility="Visible">
+        <ComboBox Name="EntreeComboBox" IsEnabled="True" HorizontalAlignment="Left" Margin="70,134,0,0" VerticalAlignment="Top" Width="120" Visibility="Visible">
             <ComboBoxItem Content="Briarheart Burger"/>
             <ComboBoxItem Content="Double Draugr"/>
             <ComboBoxItem Content="Garden Orc Omelette"/>
             <ComboBoxItem Content="Philly Poacher"/>
             <ComboBoxItem Content="Smokehouse Skeleton"/>
             <ComboBoxItem Content="Thalmor Triple"/>
-            <ComboBoxItem Content="Thugs T-Bone"/>
+            <ComboBoxItem Content="Thugs T Bone"/>
         </ComboBox>
-        <ComboBox Name="SideComboBox" HorizontalAlignment="Left" Margin="245,134,0,0" VerticalAlignment="Top" Width="120" Visibility="Visible">
+        <ComboBox Name="SideComboBox" IsEnabled="True" HorizontalAlignment="Left" Margin="245,134,0,0" VerticalAlignment="Top" Width="120" Visibility="Visible">
             <ComboBoxItem Content="Dragonborn Waffle Fries"/>
             <ComboBoxItem Content="Fried Miraak"/>
             <ComboBoxItem Content="Mad Otar Grits"/>
             <ComboBoxItem Content="Vokun Salad"/>
         </ComboBox>
-        <ComboBox Name="DrinkComboBox" HorizontalAlignment="Left" Margin="420,134,0,0" VerticalAlignment="Top" Width="120" Visibility="Visible">
+        <ComboBox Name="DrinkComboBox" IsEnabled="True" HorizontalAlignment="Left" Margin="420,134,0,0" VerticalAlignment="Top" Width="120" Visibility="Visible">
             <ComboBoxItem Content="Aretino Apple Juice"/>
             <ComboBoxItem Content="Candlehearth Coffee"/>
             <ComboBoxItem Content="Markarth Milk"/>

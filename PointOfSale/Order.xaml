@@ -9,7 +9,7 @@
              d:DesignHeight="600" d:DesignWidth="200">
 
     <DockPanel>
-        <Grid DockPanel.Dock="Top">
+        <Grid Name="TopGrid" DockPanel.Dock="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -18,7 +18,7 @@
             <TextBox Name="OrderNumNumBox" Text="{Binding Path=Number, Mode=OneWay}"  DockPanel.Dock="Top" FontWeight="Bold" TextAlignment="Center" Grid.Column="1" FontSize="20"/>
         </Grid>
         
-        <Grid DockPanel.Dock="Bottom" Height="126">
+        <Grid x:Name="BottomGrid" DockPanel.Dock="Bottom" Height="126">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>

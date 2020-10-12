@@ -38,7 +38,7 @@ namespace PointOfSale
             InitializeComponent();
             
         }
-
+        
         /// <summary>
         /// Code-behind for the remove function from the button. You have to select the item, and then hit remove for it to remove
         /// </summary>
@@ -52,5 +52,6 @@ namespace PointOfSale
                 
             }
         }
+        
     }
 }

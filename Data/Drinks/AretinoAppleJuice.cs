@@ -21,10 +21,7 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class AretinoAppleJuice : Drink, INotifyPropertyChanged
     {
-        public string ThingName
-        {
-            get { return "Aretino Apple Juice"; }
-        }
+        
         public AretinoAppleJuice()
         {
             this.Ice = false;
