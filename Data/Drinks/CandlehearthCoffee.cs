@@ -70,7 +70,7 @@ namespace BleakwindBuffet.Data.Drinks
             {
                 decaf = value;
                 OnPropertyChanged("Decaf");
-                OnPropertyChanged("SpecialInstructions");
+                OnPropertyChanged("Name");
             }
         }
 

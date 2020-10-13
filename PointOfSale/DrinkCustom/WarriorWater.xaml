@@ -14,7 +14,13 @@
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
     </UserControl.Resources>
-    <Grid Background="LightSalmon"  >
+    <Grid  >
+        <Grid.Background>
+            <ImageBrush ImageSource="/DrinkCustom/DrinkPictures/WoodBackground.jpg"/>
+        </Grid.Background>
+        <Rectangle HorizontalAlignment="Left" Height="80" Margin="334,238,0,0" Stroke="Black" VerticalAlignment="Top" Width="186" Fill="White"/>
+        <Rectangle HorizontalAlignment="Left" Height="88" Margin="77,97,0,0" Stroke="Black" VerticalAlignment="Top" Width="125" Fill="White"/>
+
         <!-- Change button names & visibility based off of click from menu chooser-->
         <TextBox HorizontalAlignment="Center" Height="30" Margin="0,44,0,0" Text="Warrior Water" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"  TextAlignment="Center" FontSize="20"/>
         <CheckBox Name ="IceCheck" Content="Ice" IsChecked="{Binding Path=Ice}" HorizontalAlignment="Left" Margin="110,110,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible" />
@@ -27,5 +33,13 @@
         <Label Content="Price:      $" HorizontalAlignment="Left" Margin="334,245,0,0" VerticalAlignment="Top" FontSize="20px"/>
         <Label Content="{Binding Path=Calories}" HorizontalAlignment="Left" Margin="424,275,0,0" VerticalAlignment="Top" FontSize="20px"/>
         <Label Content="Calories:" HorizontalAlignment="Left" Margin="334,275,0,0" VerticalAlignment="Top" FontSize="20px"/>
+        <Rectangle HorizontalAlignment="Left" Height="138" Margin="77,247,0,0" VerticalAlignment="Top" Width="140">
+            <Rectangle.Stroke>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Rectangle.Stroke>
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/DrinkCustom/DrinkPictures/WarriorWater.png" Stretch="Uniform"/>
+            </Rectangle.Fill>
+        </Rectangle>
     </Grid>
 </UserControl>

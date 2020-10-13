@@ -14,19 +14,32 @@
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
     </UserControl.Resources>
-    <Grid Background="LightSalmon" >
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="/DrinkCustom/DrinkPictures/WoodBackground.jpg"/>
+        </Grid.Background>
         <!-- Change button names & visibility based off of click from menu chooser-->
+        <Rectangle HorizontalAlignment="Left" Height="140" Margin="76,93,0,0" Stroke="Black" VerticalAlignment="Top" Width="234" Fill="White"/>
+        <!-- Change button names & visibility based off of click from menu chooser-->
+        <Rectangle HorizontalAlignment="Left" Height="80" Margin="334,238,0,0" Stroke="Black" VerticalAlignment="Top" Width="186" Fill="White"/>
         <TextBox HorizontalAlignment="Center" Height="30" Margin="0,44,0,0" Text="Candlehearth Coffee" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"  TextAlignment="Center" FontSize="20"/>
-        <CheckBox Name ="IceCheck" Content="Ice" IsChecked ="{Binding Path=Ice}" HorizontalAlignment="Left" Margin="110,110,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible" />
-        <CheckBox Name ="DecafCheck" Content="Decaf" IsChecked ="{Binding Path=Decaf}" HorizontalAlignment="Left" Margin="110,150,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible"/>
-        <CheckBox Name ="CreamCheck" Content="Room for Cream" IsChecked ="{Binding Path=RoomForCream}" HorizontalAlignment="Left" Margin="110,190,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible"/>
+        <CheckBox x:Name ="IceCheck" Content="Ice" IsChecked ="{Binding Ice}" HorizontalAlignment="Left" Margin="110,110,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible" />
+        <CheckBox x:Name ="DecafCheck" Content="Decaf" IsChecked ="{Binding Decaf}" HorizontalAlignment="Left" Margin="110,150,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible"/>
+        <CheckBox x:Name ="CreamCheck" Content="Room for Cream" IsChecked ="{Binding RoomForCream}" HorizontalAlignment="Left" Margin="110,190,0,0" VerticalAlignment="Top" FontSize="20" Visibility="Visible"/>
 
-        <ComboBox Name="ComboBox1" ItemsSource="{Binding Source={StaticResource sizes}}" SelectedItem="{Binding Path=Size}"  HorizontalAlignment="Left" Margin="400,134,0,0" VerticalAlignment="Top" Width="120" Visibility="Visible">
-        </ComboBox>
-        <Button Name="BackButton" Content="Back" HorizontalAlignment="Left" Margin="520,400,0,0" Width="70" FontSize="20" Height="40" VerticalAlignment="Top" Click="BackButton_Click"/>
-        <Label Content="{Binding Path=Price}" HorizontalAlignment="Left" Margin="425,245,0,0" VerticalAlignment="Top" FontSize="20px"/>
+        <ComboBox x:Name="ComboBox1" ItemsSource="{Binding Source={StaticResource sizes}}" SelectedItem="{Binding Size}"  HorizontalAlignment="Left" Margin="400,134,0,0" VerticalAlignment="Top" Width="120" Visibility="Visible"/>
+        <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Left" Margin="520,400,0,0" Width="70" FontSize="20" Height="40" VerticalAlignment="Top" Click="BackButton_Click"/>
+        <Label Content="{Binding Price}" HorizontalAlignment="Left" Margin="425,245,0,0" VerticalAlignment="Top" FontSize="20px"/>
         <Label Content="Price:      $" HorizontalAlignment="Left" Margin="334,245,0,0" VerticalAlignment="Top" FontSize="20px"/>
-        <Label Content="{Binding Path=Calories}" HorizontalAlignment="Left" Margin="424,275,0,0" VerticalAlignment="Top" FontSize="20px"/>
+        <Label Content="{Binding Calories}" HorizontalAlignment="Left" Margin="424,275,0,0" VerticalAlignment="Top" FontSize="20px"/>
         <Label Content="Calories:" HorizontalAlignment="Left" Margin="334,275,0,0" VerticalAlignment="Top" FontSize="20px"/>
+        <Rectangle HorizontalAlignment="Left" Height="138" Margin="77,269,0,0" VerticalAlignment="Top" Width="140">
+            <Rectangle.Stroke>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Rectangle.Stroke>
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/DrinkCustom/DrinkPictures/CandlehearthCoffee.png" Stretch="Uniform"/>
+            </Rectangle.Fill>
+        </Rectangle>
     </Grid>
 </UserControl>

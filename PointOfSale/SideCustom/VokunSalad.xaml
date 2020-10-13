@@ -6,7 +6,7 @@
              xmlns:system="clr-namespace:BleakwindBuffet.Data.Enums;assembly=Data"
              xmlns:local="clr-namespace:PointOfSale.SideCustom"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="600">
     <UserControl.Resources>
         <ObjectDataProvider x:Key="sizes" MethodName="GetValues" ObjectType="system:Size">
             <ObjectDataProvider.MethodParameters>
@@ -14,7 +14,12 @@
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
     </UserControl.Resources>
-    <Grid Background="LightSalmon">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/DrinkCustom/DrinkPictures/WoodBackground.jpg"/>
+        </Grid.Background>
+        <Rectangle HorizontalAlignment="Left" Height="80" Margin="334,238,0,0" Stroke="Black" VerticalAlignment="Top" Width="186" Fill="White"/>
+
         <!-- Change button names & visibility based off of click from menu chooser-->
         <TextBox Name="Name" HorizontalAlignment="Center" Height="30" Margin="0,44,0,0" Text="Vokun Salad" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" TextAlignment="Center" FontSize="20"/>
         <ComboBox Name="ComboBox1" ItemsSource="{Binding Source={StaticResource sizes}}" SelectedItem="{Binding Path=Size}" HorizontalAlignment="Left" Margin="400,134,0,0" VerticalAlignment="Top" Width="120" Visibility="Visible">
@@ -24,5 +29,13 @@
         <Label Content="Price:      $" HorizontalAlignment="Left" Margin="334,245,0,0" VerticalAlignment="Top" FontSize="20px"/>
         <Label Content="{Binding Path=Calories}" HorizontalAlignment="Left" Margin="424,275,0,0" VerticalAlignment="Top" FontSize="20px"/>
         <Label Content="Calories:" HorizontalAlignment="Left" Margin="334,275,0,0" VerticalAlignment="Top" FontSize="20px"/>
+        <Rectangle HorizontalAlignment="Left" Height="138" Margin="77,144,0,0" VerticalAlignment="Top" Width="140">
+            <Rectangle.Stroke>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Rectangle.Stroke>
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/SideCustom/SidePictures/VokunSalad1.png" Stretch="Uniform" TileMode="None"/>
+            </Rectangle.Fill>
+        </Rectangle>
     </Grid>
 </UserControl>

@@ -7,7 +7,49 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="BleakwindBuffetMainPic.png" />
+    <None Remove="DrinkCustom\AretinoAppleJuice.png" />
+    <None Remove="DrinkCustom\CandlehearthCoffee.png" />
+    <None Remove="DrinkCustom\MarkarthMilk.png" />
+    <None Remove="DrinkCustom\SailorsSoda.png" />
+    <None Remove="DrinkCustom\WarriorWater.png" />
+    <None Remove="DrinkCustom\WoodBackground.jpg" />
+    <None Remove="EntreeCustom\Burger.png" />
+    <None Remove="EntreeCustom\GardenOrcOmelette.png" />
+    <None Remove="EntreeCustom\PhillyPoacher.png" />
+    <None Remove="EntreeCustom\SmokehouseSkeleton.png" />
+    <None Remove="EntreeCustom\ThugsTBone.png" />
+    <None Remove="SideCustom\DragonBornWaffleFries.png" />
+    <None Remove="SideCustom\FriedMirrak.png" />
+    <None Remove="SideCustom\MadOtarGrits.png" />
+    <None Remove="SideCustom\VokunSalad.png" />
+    <None Remove="SideCustom\VokunSalad1.png" />
+    <None Remove="WoodBackground.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Data\Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="BleakwindBuffetMainPic.png" />
+    <Resource Include="DrinkCustom\DrinkPictures\AretinoAppleJuice.png" />
+    <Resource Include="DrinkCustom\DrinkPictures\CandlehearthCoffee.png" />
+    <Resource Include="DrinkCustom\DrinkPictures\MarkarthMilk.png" />
+    <Resource Include="DrinkCustom\DrinkPictures\SailorsSoda.png" />
+    <Resource Include="DrinkCustom\DrinkPictures\WarriorWater.png" />
+    <Resource Include="DrinkCustom\DrinkPictures\WoodBackground.jpg" />
+    <Resource Include="EntreeCustom\EntreePictures\Burger.png" />
+    <Resource Include="EntreeCustom\EntreePictures\GardenOrcOmelette.png" />
+    <Resource Include="EntreeCustom\EntreePictures\PhillyPoacher.png" />
+    <Resource Include="EntreeCustom\EntreePictures\SmokehouseSkeleton.png" />
+    <Resource Include="EntreeCustom\EntreePictures\ThugsTBone.png" />
+    <Resource Include="SideCustom\SidePictures\MadOtarGrits.png" />
+    <Resource Include="SideCustom\SidePictures\FriedMirrak.png" />
+    <Resource Include="SideCustom\SidePictures\DragonBornWaffleFries.png" />
+    <Resource Include="SideCustom\SidePictures\VokunSalad.png" />
+    <Resource Include="SideCustom\SidePictures\VokunSalad1.png" />
+    <Resource Include="WoodBackground.jpg" />
   </ItemGroup>
 
 </Project>

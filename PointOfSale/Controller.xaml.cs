@@ -38,6 +38,7 @@ namespace PointOfSale
         /// </summary>
         public Controller()
         {
+            
             InitializeComponent();
             menuChooser.Ancestor = this;
             screens.Add(Screen.MenuChooser, menuChooser);
@@ -81,6 +82,19 @@ namespace PointOfSale
         private void menuChoose_Loaded(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void EnterButton_Click(object sender, RoutedEventArgs e)
+        {
+            EnterButton.IsEnabled = false;
+            EnterButton.Opacity = 0;
+            EnterButton.Width = 0;
+            EnterButton.Height = 0;
+            MainScreen.Opacity = 0;
+            MainScreen.IsEnabled = false;
+            MainScreen.Width = 0;
+            MainScreen.Height = 0;
+            
         }
     }
 }

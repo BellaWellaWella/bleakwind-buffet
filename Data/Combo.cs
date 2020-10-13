@@ -176,5 +176,16 @@ namespace BleakwindBuffet.Data
             return ("Combo");
         }
 
+        /// <summary>
+        /// Method to return name in order to display updated size
+        /// </summary>
+        public string Name
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
     }
 }

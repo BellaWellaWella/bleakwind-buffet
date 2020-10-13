@@ -6,8 +6,13 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="600">
-     <Grid Background="LightSalmon">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/WoodBackground.jpg"/>
+        </Grid.Background>
         <!-- Change button names & visibility based off of click from menu chooser-->
+        <Rectangle HorizontalAlignment="Left" Height="80" Margin="334,238,0,0" Stroke="Black" VerticalAlignment="Top" Width="186" Fill="White"/>
+
         <TextBox Name ="Name" HorizontalAlignment="Center" Height="30" Margin="0,44,0,0" Text="Create a Combo" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"  TextAlignment="Center" FontSize="20"/>
         <ComboBox Name="EntreeComboBox" IsEnabled="True" HorizontalAlignment="Left" Margin="70,134,0,0" VerticalAlignment="Top" Width="120" Visibility="Visible">
             <ComboBoxItem Content="Briarheart Burger"/>
@@ -31,9 +36,9 @@
             <ComboBoxItem Content="Sailors Soda"/>
             <ComboBoxItem Content="Warrior Water"/>
         </ComboBox>
-        <Label Content="Entree:" FontSize="15" Margin="65,105,0,0"/>
-        <Label Content="Side:" FontSize="15" Margin="240,105,0,0"/>
-        <Label Content="Drink:" FontSize="15" Margin="415,105,0,0"/>
+        <Label Content="Entree:" FontSize="15" Margin="65,105,0,0" Foreground="#FFFBFBFB"/>
+        <Label Content="Side:" FontSize="15" Margin="240,105,0,0" Foreground="White"/>
+        <Label Content="Drink:" FontSize="15" Margin="415,105,0,0" Foreground="White"/>
 
         <Button Name="BackButton" Content="Back" HorizontalAlignment="Left" Margin="520,400,0,0" Width="70" FontSize="20" Height="40" VerticalAlignment="Top" Click="BackButton_Click"/>
         <Label Content="{Binding Path=Price}" HorizontalAlignment="Left" Margin="425,245,0,0" VerticalAlignment="Top" FontSize="20px"/>

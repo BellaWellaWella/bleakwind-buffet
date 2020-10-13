@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d"
              
-             d:DesignHeight="600" d:DesignWidth="200">
+             d:DesignHeight="600" d:DesignWidth="300">
 
     <DockPanel>
         <Grid Name="TopGrid" DockPanel.Dock="Top">
@@ -41,7 +41,7 @@
 
         
 
-        <ListBox Name="orderList" Height="446" Width="200" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}">
+        <ListBox Name="orderList" Height="446" Width="300" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}">
             <ListBox.ItemTemplate >
                 <DataTemplate>
                     <Grid>
@@ -49,10 +49,13 @@
                             <RowDefinition/>
                             <RowDefinition/>
                             <RowDefinition/>
+                            <RowDefinition/>
                         </Grid.RowDefinitions>
                         <TextBlock Text="{Binding Path=Name}" FontWeight="Bold" Grid.Row="0" />
-                        <ListBox ItemsSource="{Binding Path=SpecialInstructions}" Grid.Row="1"/>
-                        <Button x:Name="removeButton" Content="Remove Item" Grid.Row="2" Click="RemoveButton_Click"/>
+                        <TextBlock Text="$" Grid.Row="1"/>
+                        <TextBlock Text="{Binding Path=Price, StringFormat='c'}" Grid.Row="1" />
+                        <ListBox ItemsSource="{Binding Path=SpecialInstructions}" Grid.Row="2"/>
+                        <Button x:Name="removeButton" Content="Remove Item" Grid.Row="3" Click="RemoveButton_Click"/>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
