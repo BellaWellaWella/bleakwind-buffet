@@ -38,7 +38,6 @@ namespace PointOfSale.DrinkCustom
         {
             InitializeComponent();
             this.Ancestor = ancestor;
-            //this.DataContext = new BleakwindBuffet.Data.Drinks.CandlehearthCoffee();
 
         }
 

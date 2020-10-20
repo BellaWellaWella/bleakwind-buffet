@@ -333,5 +333,11 @@ namespace PointOfSale
             }
 
         }
+
+        private void CheckoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            Ancestor.SwitchScreen(Screen.CompleteOrder);
+
+        }
     }
 }

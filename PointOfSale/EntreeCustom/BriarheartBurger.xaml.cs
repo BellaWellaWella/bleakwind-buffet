@@ -38,8 +38,6 @@ namespace PointOfSale.EntreeCustom
         {
             InitializeComponent();
             this.Ancestor = ancestor;
-            //this.DataContext = new BleakwindBuffet.Data.Entrees.BriarheartBurger();
-
         }
 
         

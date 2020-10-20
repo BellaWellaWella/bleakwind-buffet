@@ -20,7 +20,24 @@ namespace BleakwindBuffet.DataTests
 {
     public class OrderTests
     {
+        [Fact]
+        public void ItemsChangedIsOrderChanged()
+        {
+            Combo c = new Combo();
 
+            BriarheartBurger bb = new BriarheartBurger();
+            AretinoAppleJuice aa = new AretinoAppleJuice();
+            DragonbornWaffleFries dw = new DragonbornWaffleFries();
+            c.Entree = bb;
+            c.Drink = aa;
+            c.Side = dw;
+
+            Assert.PropertyChanged(c, "Drink", () =>
+            {
+                aa.Size = Size.Large;
+                c.Drink = aa;
+            });
+        }
 
         [Fact]
         public void ShouldBeAIPropChangedItem()

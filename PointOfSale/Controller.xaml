@@ -15,7 +15,7 @@
             <local:MenuChooser x:Name="menuChooser" HorizontalAlignment="Center" Width="600"/>
         </Border>
 
-        <local:Order Grid.Column="1"></local:Order>
+        <local:Order x:Name="order" Grid.Column="1"></local:Order>
         <Rectangle x:Name="MainScreen" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="600" Stroke="Black" VerticalAlignment="Center" Width="900">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/BleakwindBuffetMainPic.png"/>

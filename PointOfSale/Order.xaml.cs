@@ -9,6 +9,8 @@
  * 
 */
 using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data.Entrees;
 using PointOfSale.EntreeCustom;
 using PointOfSale.SideCustom;
 using System;
@@ -33,10 +35,12 @@ namespace PointOfSale
     /// </summary>
     public partial class Order : UserControl
     {
+        public Controller Ancestor { get; set; }
+
         public Order()
         {
             InitializeComponent();
-            
+
         }
         
         /// <summary>
@@ -52,6 +56,104 @@ namespace PointOfSale
                 
             }
         }
-        
+
+        private void editButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+            if (DataContext is BleakwindBuffet.Data.Order currentOrder)
+            {
+                if(orderList.SelectedItem is Entree)
+                {
+                    if (orderList.SelectedItem is BleakwindBuffet.Data.Entrees.BriarheartBurger)
+                    {
+                        var screen = Ancestor.SwitchScreen(Screen.BriarheartBurger);
+                        screen.DataContext = orderList.SelectedItem;
+                    }
+                    else if (orderList.SelectedItem is BleakwindBuffet.Data.Entrees.DoubleDraugr)
+                    {
+                        var screen = Ancestor.SwitchScreen(Screen.DoubleDraugr);
+                        screen.DataContext = orderList.SelectedItem;
+                    }
+                    else if (orderList.SelectedItem is BleakwindBuffet.Data.Entrees.GardenOrcOmelette)
+                    {
+                        var screen = Ancestor.SwitchScreen(Screen.GardenOrcOmelette);
+                        screen.DataContext = orderList.SelectedItem;
+                    }
+                    else if (orderList.SelectedItem is BleakwindBuffet.Data.Entrees.PhillyPoacher)
+                    {
+                        var screen = Ancestor.SwitchScreen(Screen.PhillyPoacher);
+                        screen.DataContext = orderList.SelectedItem;
+                    }
+                    else if (orderList.SelectedItem is BleakwindBuffet.Data.Entrees.SmokehouseSkeleton)
+                    {
+                        var screen = Ancestor.SwitchScreen(Screen.SmokehouseSkeleton);
+                        screen.DataContext = orderList.SelectedItem;
+                    }
+                    else if (orderList.SelectedItem is BleakwindBuffet.Data.Entrees.ThalmorTriple)
+                    {
+                        var screen = Ancestor.SwitchScreen(Screen.ThalmorTriple);
+                        screen.DataContext = orderList.SelectedItem;
+                    }
+                    else if (orderList.SelectedItem is BleakwindBuffet.Data.Entrees.ThugsTBone)
+                    {
+                        var screen = Ancestor.SwitchScreen(Screen.ThugsTBone);
+                        screen.DataContext = orderList.SelectedItem;
+                    }
+                }
+                else if (orderList.SelectedItem is Drink)
+                {
+                    if (orderList.SelectedItem is BleakwindBuffet.Data.Drinks.AretinoAppleJuice)
+                    {
+                        var screen = Ancestor.SwitchScreen(Screen.AretinoAppleJuice);
+                        screen.DataContext = orderList.SelectedItem;
+                    }
+                    else if (orderList.SelectedItem is BleakwindBuffet.Data.Drinks.CandlehearthCoffee)
+                    {
+                        var screen = Ancestor.SwitchScreen(Screen.CandlehearthCoffee);
+                        screen.DataContext = orderList.SelectedItem;
+                    }
+                    else if (orderList.SelectedItem is BleakwindBuffet.Data.Drinks.MarkarthMilk)
+                    {
+                        var screen = Ancestor.SwitchScreen(Screen.MarkarthMilk);
+                        screen.DataContext = orderList.SelectedItem;
+                    }
+                    else if (orderList.SelectedItem is BleakwindBuffet.Data.Drinks.SailorSoda)
+                    {
+                        var screen = Ancestor.SwitchScreen(Screen.SailorsSoda);
+                        screen.DataContext = orderList.SelectedItem;
+                    }
+                    else if (orderList.SelectedItem is BleakwindBuffet.Data.Drinks.WarriorWater)
+                    {
+                        var screen = Ancestor.SwitchScreen(Screen.WarriorWater);
+                        screen.DataContext = orderList.SelectedItem;
+                    }
+                }
+                else
+                {
+                    if (orderList.SelectedItem is BleakwindBuffet.Data.Sides.DragonbornWaffleFries)
+                    {
+                        var screen = Ancestor.SwitchScreen(Screen.DragonbornWaffleFries);
+                        screen.DataContext = orderList.SelectedItem;
+                    }
+                    else if (orderList.SelectedItem is BleakwindBuffet.Data.Sides.FriedMiraak)
+                    {
+                        var screen = Ancestor.SwitchScreen(Screen.FriedMiraak);
+                        screen.DataContext = orderList.SelectedItem;
+                    }
+                    else if (orderList.SelectedItem is BleakwindBuffet.Data.Sides.MadOtarGrits)
+                    {
+                        var screen = Ancestor.SwitchScreen(Screen.MadOtarGrits);
+                        screen.DataContext = orderList.SelectedItem;
+                    }
+                    else if (orderList.SelectedItem is BleakwindBuffet.Data.Sides.VokunSalad)
+                    {
+                        var screen = Ancestor.SwitchScreen(Screen.VokunSalad);
+                        screen.DataContext = orderList.SelectedItem;
+                    }
+                }
+            
+            }
+            
+        }
     }
 }

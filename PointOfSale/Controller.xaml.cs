@@ -41,6 +41,7 @@ namespace PointOfSale
             
             InitializeComponent();
             menuChooser.Ancestor = this;
+            order.Ancestor = this;
             screens.Add(Screen.MenuChooser, menuChooser);
             screens.Add(Screen.ItemCustom, new ItemCustom(this));
             screens.Add(Screen.WarriorWater, new DrinkCustom.WarriorWater(this));
@@ -60,8 +61,10 @@ namespace PointOfSale
             screens.Add(Screen.PhillyPoacher, new EntreeCustom.PhillyPoacher(this));
             screens.Add(Screen.ThugsTBone, new EntreeCustom.ThugsTBone(this));
             screens.Add(Screen.Combo, new Combo(this));
+            screens.Add(Screen.CompleteOrder, new CheckoutScreens.CompleteOrder(this));
+            screens.Add(Screen.CashPayment, new CheckoutScreens.CashPayment(this));
 
-            //Order mainOrder = new Order();
+
 
             BleakwindBuffet.Data.Order currentOrder = new BleakwindBuffet.Data.Order();
 

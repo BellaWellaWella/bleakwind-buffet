@@ -32,6 +32,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="RoundRegister">
+      <HintPath>..\RoundRegister.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="BleakwindBuffetMainPic.png" />
     <Resource Include="DrinkCustom\DrinkPictures\AretinoAppleJuice.png" />
     <Resource Include="DrinkCustom\DrinkPictures\CandlehearthCoffee.png" />

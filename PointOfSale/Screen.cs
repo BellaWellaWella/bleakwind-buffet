@@ -37,6 +37,10 @@ namespace PointOfSale
         GardenOrcOmelette,
         PhillyPoacher,
         ThugsTBone,
-        Combo
+        Combo, 
+        CompleteOrder,
+        CashPayment
+        
+        
     }
 }

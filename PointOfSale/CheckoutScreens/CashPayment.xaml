@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="PointOfSale.CheckoutScreens.CashPayment"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale.CheckoutScreens"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600">
+    <Grid x:Name="mainGrid">
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/WoodBackground.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="   From &#xA;Customer" FontSize="10" Grid.Row="0" Foreground="#FFF8F8F8" Margin="0,18,0,27" Grid.RowSpan="2" HorizontalAlignment="Center"/>
+        <Label Content="    Give &#xD;&#xA;As Change" FontSize="10" Grid.Row="0" Grid.Column="0" Foreground="#FFF8F8F8" Margin="237,18,0,26" Grid.RowSpan="2" HorizontalAlignment="Left"/>
+        <Label Content="   From &#xD;&#xA;Customer" FontSize="10" Grid.Row="0" Grid.Column="1" Foreground="#FFF8F8F8"  Grid.RowSpan="3" Margin="0,18,0,27" HorizontalAlignment="Center"/>
+        <Label Content="    Give &#xD;&#xA;As Change" FontSize="10" Grid.Row="0" Grid.Column="1" Foreground="#FFF8F8F8" Grid.RowSpan="3" Margin="235,18,0,27" HorizontalAlignment="Left"/>
+
+        <Button x:Name="CheckoutButton" Content="Finalize Sale" FontSize="20" Background="LightGreen" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="7" Grid.RowSpan="2" Margin="150,10,0,10" Width="140" Click="CheckoutButton_Click"/>
+        <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Left" Width="70" FontSize="20" Height="40" Click="BackButton_Click" Grid.Column="1" Margin="220,0,0,5" Grid.Row="9"/>
+        <TextBlock Name="TotalOwed" FontSize="20"  HorizontalAlignment="Left" Margin="50,0,0,0" Grid.Column="1" Grid.Row="7" Text="{Binding Path=Subtotal, Mode=OneWay,StringFormat=N2}" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="#FFFCFCFC" Background="Black" Height="36" Width="70" TextAlignment="Center"/>
+        <Label Content="Total:" FontSize="20" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Column="1" Grid.Row="7" VerticalAlignment="Center" Background="#FF080000" Foreground="White"/>
+        <TextBlock Name="AmountDue" FontSize="20" HorizontalAlignment="Left" Margin="49,0,0,0" Grid.Column="1" Grid.Row="8" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="#FFFCFCFC" Background="#FF651313" Height="36" Width="70" TextAlignment="Center"/>
+        <Label Content="Due:" FontSize="20" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Column="1" Grid.Row="8" VerticalAlignment="Center" Background="#FF651313" Foreground="White"/>
+        <TextBlock Name="ChangeDue" FontSize="20" HorizontalAlignment="Left" Margin="80,0,0,0" Grid.Column="1" Grid.Row="9" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="#FFFCFCFC" Background="#FF145208" Height="36" Width="70" TextAlignment="Center"/>
+        <Label Content="Change:" FontSize="20" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Column="1" Grid.Row="9" VerticalAlignment="Center" Background="#FF145208" Foreground="White"/>
+
+    </Grid>
+</UserControl>

@@ -42,7 +42,6 @@ namespace PointOfSale.DrinkCustom
         {
             InitializeComponent();
             this.Ancestor = ancestor;
-            //this.DataContext = new BleakwindBuffet.Data.Drinks.AretinoAppleJuice();
 
         }
 
@@ -56,15 +55,6 @@ namespace PointOfSale.DrinkCustom
         {
             Ancestor.SwitchScreen(Screen.MenuChooser);
         }
-        /*
-        private void ComboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (DataContext is BleakwindBuffet.Data.Drinks.AretinoAppleJuice aj)
-            {
-                aj.Size = (BleakwindBuffet.Data.Enums.Size) ComboBox1.SelectedItem;
-
-            }
-        }
-        */
+        
     }
 }
