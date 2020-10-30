@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Author: Bella Goddard
+* Class name: Order
+* Purpose: To create the model for an Order
+*/
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

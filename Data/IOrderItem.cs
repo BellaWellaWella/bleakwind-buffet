@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Author: Bella Goddard
+* Class name: IOrderItem
+* Purpose: To create the model for an IOrderItem
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;

@@ -1,4 +1,10 @@
-﻿using BleakwindBuffet.Data.Drinks;
+﻿/*
+* Author: Bella Goddard
+* Class name: Menu
+* Purpose: To create the model for menu
+*/
+
+using BleakwindBuffet.Data.Drinks;
 using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Sides;

@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Author: Bella Goddard
+* Class name: Combo
+* Purpose: To create the model for a combo
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;

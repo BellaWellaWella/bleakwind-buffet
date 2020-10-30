@@ -1,0 +1,76 @@
+﻿
+
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<!--
+ Author: Bella Goddard
+ Class name: Index
+ Purpose: The index that displays the main page
+
+-->
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Bleakwind Buffet</h1>
+    <p class="top-text">We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim. Shake the blood off your sword and sake your thirst with one of our old-fashioned sailor sodas. Hack into a Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger! You’ve had a hard adventure and earned your loot, so spend it with us!.</p>
+    <h2>
+        Entrees
+    </h2>
+    @foreach (BleakwindBuffet.Data.Entrees.Entree e in Model.Entrees)
+    {
+        <div class="menu-item">
+            <h3 class="name-item">@e.Name</h3>
+            <div class="price-item">Price: $@e.Price</div>
+            <div class="calories-item"> Calories: @e.Calories</div>
+            <p></p>
+        </div>
+    }
+
+    <h2 class="header">
+        Sides
+    </h2>
+    @foreach (BleakwindBuffet.Data.Sides.Side e in Model.Sides)
+    {
+        <div class="menu-item">
+            <h3 class="name-item">@e.Name</h3>
+            <div class="price-item">Price: $@e.Price</div>
+            <div class="calories-item"> Calories: @e.Calories</div>
+            <p></p>
+        </div>
+    }
+    <h2 class="header">
+        Drinks
+    </h2>
+    @foreach (BleakwindBuffet.Data.Drinks.Drink e in Model.Drinks)
+    {
+        <div class="menu-item">
+            <h3 class="name-item">@e.Name</h3>
+            <div class="price-item">Price: $@e.Price</div>
+            <div class="calories-item"> Calories: @e.Calories</div>
+            <p></p>
+        </div>
+    }
+    <h2>
+        Combo
+    </h2>
+    <p class="details">
+        Create a combo by picking an entree, side, and drink! You get $1 off!
+    </p>
+    <h2>
+        Soda Flavors
+    </h2>
+    <img src="~/css/SailorsSoda.png" class="soda-pic" />
+    <pre class="details">
+        Blackberry
+        Cherry
+        Grapefruit 
+        Lemon 
+        Peach
+        Watermelon
+    </pre>
+
+
+</div>
