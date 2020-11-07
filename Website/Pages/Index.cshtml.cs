@@ -12,25 +12,51 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using BleakwindBuffet.Data.Menu;
 using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Enums;
+using Microsoft.VisualBasic.CompilerServices;
 
 namespace Website.Pages
 {
     public class IndexModel : PageModel
     {
-        /// <summary>
-        /// Getting a reference to entrees
-        /// </summary>
-        public IEnumerable<IOrderItem> Entrees {get { return Menu.Entrees(); } }
+        
+        //All the items in the list
+        public IEnumerable<IOrderItem> AllItems { get; set; }
 
         /// <summary>
-        /// getting a reference to drinks
+        /// the terms for the search
         /// </summary>
-        public IEnumerable<IOrderItem> Drinks { get { return Menu.Drinks(); } }
+        public string SearchTerms { get; set; }
 
         /// <summary>
-        /// getting a reference to sides
+        /// the category that is entered
         /// </summary>
-        public IEnumerable<IOrderItem> Sides { get { return Menu.Sides(); } }
+        public string[] ItemCategory { get; set; }
+
+        /// <summary>
+        /// the minimum calories wanted
+        /// </summary>
+        //[BindProperty]
+        public int? CalMin { get; set; } = null;
+
+        /// <summary>
+        /// the maximum calories wanted
+        /// </summary>
+        //[BindProperty]
+        public int? CalMax { get; set; } = null;
+
+        /// <summary>
+        /// the minimum price wanted
+        /// </summary>
+        //[BindProperty]
+        public double? PriceMin { get; set; } = null;
+
+        /// <summary>
+        /// the maximum price wanted
+        /// </summary>
+        //[BindProperty]
+        public double? PriceMax { get; set; } = null;
+
 
         /// <summary>
         /// logger variable
@@ -49,9 +75,21 @@ namespace Website.Pages
         /// <summary>
         /// on get methon, not used yet
         /// </summary>
-        public void OnGet()
+        public void OnGet(int? calMin, int? calMax, double? priceMin, double? priceMax)
         {
+            SearchTerms = Request.Query["SearchTerms"];
+            AllItems = Menu.Search(SearchTerms);
 
+            ItemCategory = Request.Query["ItemCategory"];
+            AllItems = Menu.FilterByCategory(AllItems, ItemCategory);
+
+            CalMin = calMin;
+            CalMax = calMax;
+            PriceMin = priceMin;
+            PriceMax = priceMax;
+
+            AllItems = Menu.FilterByCalories(AllItems, CalMin, CalMax);
+            AllItems = Menu.FilterByPrice(AllItems, PriceMin, PriceMax);
         }
     }
 }

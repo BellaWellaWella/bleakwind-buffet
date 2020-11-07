@@ -4,6 +4,7 @@
 * Purpose: To create the base class for Entree
 */
 
+using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,5 +57,7 @@ namespace BleakwindBuffet.Data.Entrees
                 return this.ToString();
             }
         }
+
+        public ItemType itemType { get { return BleakwindBuffet.Data.Enums.ItemType.Entree; } }
     }
 }

@@ -18,6 +18,8 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public abstract class Drink : IOrderItem
     {
+
+
         //private backing variable for size
         private Size size = Size.Small;
 
@@ -78,6 +80,6 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
-
+        public ItemType itemType { get { return BleakwindBuffet.Data.Enums.ItemType.Drink; } }
     }
 }

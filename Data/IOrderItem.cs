@@ -4,6 +4,7 @@
 * Purpose: To create the model for an IOrderItem
 */
 
+using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,21 +18,28 @@ namespace BleakwindBuffet.Data
     public interface IOrderItem
     {
         /// <summary>
-        /// The price of the drink
+        /// The price of the thing
         /// </summary>
         /// <value>In US dollars</value>
         double Price { get; }
 
         /// <summary>
-        /// The calories of the drink
+        /// The calories of the thing
         /// </summary>
         uint Calories { get; }
 
         /// <summary>
-        /// Special instructions to prepare the drink
+        /// The name of the thing
+        /// </summary>
+        string Name { get; }
+
+        /// <summary>
+        /// Special instructions to prepare the thing
         /// </summary>
         List<string> SpecialInstructions { get; }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+        public ItemType itemType { get; }
     }
 }

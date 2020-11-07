@@ -14,11 +14,180 @@ using System.Text;
 using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Sides;
 using BleakwindBuffet.Data.Drinks;
+using Microsoft.VisualBasic.FileIO;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections;
+using Assert = Xunit.Assert;
+using System.Linq;
 
 namespace BleakwindBuffet.DataTests.UnitTests.MenuTests
 {
     public class MenuTests
     {
+        //Search Tests
+        [Fact]
+        public void SearchNullShouldReturnFullList()
+        {
+            string test = null;
+            IEnumerable<IOrderItem> testList = Menu.Search(test);
+            Assert.Equal(testList.ToString(), Menu.All.ToString());
+        }
+
+        [Fact]
+        public void SearchLargeShouldReturnLarges()
+        {
+            string test = "Large";
+            List<IOrderItem> l = new List<IOrderItem>();
+
+            foreach (IOrderItem i in Menu.All)
+            {
+                if (i.Name.Contains(test))
+                {
+                    l.Add(i);
+                }
+            }
+
+            IEnumerable<IOrderItem> testList = Menu.Search(test);
+            Assert.Equal(testList.ToString(), l.ToString());
+        }
+
+
+
+        //Filter by Category Tests
+        [Fact]
+        public void CategoryNullShouldReturnFullList()
+        {
+            IEnumerable<IOrderItem> testList = Menu.FilterByCategory(Menu.All, null);
+            Assert.Equal(testList.ToString(), Menu.All.ToString());
+        }
+
+        [Fact]
+        public void CategoryDrinkShouldReturnDrinks()
+        {
+            IEnumerable<string> category = new List<string>() { "Drink"};
+            IEnumerable<IOrderItem> testList = Menu.FilterByCategory(Menu.All, category);
+            Assert.Equal(testList.ToString(), Menu.Drinks().ToString());
+        }
+        [Fact]
+        public void CategorySideShouldReturnDrinks()
+        {
+            IEnumerable<string> category = new List<string>() { "Side" };
+            IEnumerable<IOrderItem> testList = Menu.FilterByCategory(Menu.All, category);
+            Assert.Equal(testList.ToString(), Menu.Sides().ToString());
+        }
+        [Fact]
+        public void CategoryEntreeShouldReturnDrinks()
+        {
+            IEnumerable<string> category = new List<string>() { "Entree" };
+            IEnumerable<IOrderItem> testList = Menu.FilterByCategory(Menu.All, category);
+            Assert.Equal(testList.ToString(), Menu.Entrees().ToString());
+        }
+
+        //Filter by Calorie Tests
+        [Fact]
+        public void CalorieNullShouldReturnFullList()
+        {
+            IEnumerable<IOrderItem> testList = Menu.FilterByCalories(Menu.All, null, null);
+            Assert.Equal(testList.ToString(), Menu.All.ToString());
+        }
+        [Fact]
+        public void OnlyMinCalories()
+        {
+            List<IOrderItem> category = new List<IOrderItem>();
+            foreach (IOrderItem item in Menu.All)
+            {
+                if(item.Calories >= 100)
+                {
+                    category.Add(item);
+                }
+            }
+            IEnumerable<IOrderItem> testList = Menu.FilterByCalories(Menu.All, 100, null);
+            Assert.Equal(testList.ToString(), category.ToString());
+        }
+        [Fact]
+        public void OnlyMaxCalories()
+        {
+            List<IOrderItem> category = new List<IOrderItem>();
+            foreach (IOrderItem item in Menu.All)
+            {
+                if (item.Calories <= 100)
+                {
+                    category.Add(item);
+                }
+            }
+            IEnumerable<IOrderItem> testList = Menu.FilterByCalories(Menu.All, null, 100);
+            Assert.Equal(testList.ToString(), category.ToString());
+        }
+        [Fact]
+        public void BothCals()
+        {
+            List<IOrderItem> category = new List<IOrderItem>();
+            foreach (IOrderItem item in Menu.All)
+            {
+                if (item.Calories <= 400 && item.Calories >= 100)
+                {
+                    category.Add(item);
+                }
+            }
+            IEnumerable<IOrderItem> testList = Menu.FilterByCalories(Menu.All, 100, 400);
+            Assert.Equal(testList.ToString(), category.ToString());
+        }
+
+
+
+        //Filter by Price Tests
+        [Fact]
+        public void PriceNullShouldReturnFullList()
+        {
+            IEnumerable<IOrderItem> testList = Menu.FilterByPrice(Menu.All, null, null);
+            Assert.Equal(testList.ToString(), Menu.All.ToString());
+        }
+        [Fact]
+        public void OnlyMinPrice()
+        {
+            List<IOrderItem> category = new List<IOrderItem>();
+            foreach (IOrderItem item in Menu.All)
+            {
+                if (item.Price >= 1)
+                {
+                    category.Add(item);
+                }
+            }
+            IEnumerable<IOrderItem> testList = Menu.FilterByPrice(Menu.All, 1, null);
+            Assert.Equal(testList.ToString(), category.ToString());
+        }
+        [Fact]
+        public void OnlyMaxPrice()
+        {
+            List<IOrderItem> category = new List<IOrderItem>();
+            foreach (IOrderItem item in Menu.All)
+            {
+                if (item.Calories <= 1)
+                {
+                    category.Add(item);
+                }
+            }
+            IEnumerable<IOrderItem> testList = Menu.FilterByPrice(Menu.All, null, 1);
+            Assert.Equal(testList.ToString(), category.ToString());
+        }
+        [Fact]
+        public void BothPrice()
+        {
+            List<IOrderItem> category = new List<IOrderItem>();
+            foreach (IOrderItem item in Menu.All)
+            {
+                if (item.Calories <= 1 && item.Calories >= .50)
+                {
+                    category.Add(item);
+                }
+            }
+            IEnumerable<IOrderItem> testList = Menu.FilterByPrice(Menu.All, .50, 1);
+            Assert.Equal(testList.ToString(), category.ToString());
+        }
+
+
+
+
         [Fact]
         public void ShouldReturnSides()
         {

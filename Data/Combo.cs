@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
-
+using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.Data
 {
@@ -22,6 +22,8 @@ namespace BleakwindBuffet.Data
         {
          
         }
+
+        public ItemType itemType { get { return BleakwindBuffet.Data.Enums.ItemType.Combo; } }
 
 
         private IOrderItem drink;

@@ -75,5 +75,7 @@ namespace BleakwindBuffet.Data.Sides
                 return this.ToString();
             }
         }
+
+        public ItemType itemType { get { return BleakwindBuffet.Data.Enums.ItemType.Side; } }
     }
 }
