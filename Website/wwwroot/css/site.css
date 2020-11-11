@@ -7,6 +7,9 @@
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+
+
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -97,6 +100,8 @@ h2 {
     
 }
 
+
+
 .menu-item{
     text-align: left;
 }
@@ -107,6 +112,10 @@ h2 {
     font-size:small;
 }
 .calories-item{
+    font-size:small;
+}
+
+.description-item{
     font-size:small;
 }
 .soda-pic{
@@ -146,3 +155,21 @@ form#list-items {
     #filters h4 {
         margin-bottom: 0.2rem;
     }
+
+
+#results {
+    display:flex;
+    flex-direction:row;
+}
+
+#results > div{
+    padding: 5px;
+    width: 33%;
+}
+
+@media (max-width: 490px){
+    #results{
+        width:100%;
+        flex-direction:column;
+    }
+}

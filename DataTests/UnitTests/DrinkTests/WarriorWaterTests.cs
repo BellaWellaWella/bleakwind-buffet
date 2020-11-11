@@ -19,6 +19,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     public class WarriorWaterTests
     {
         [Fact]
+        public void ShouldHaveCorrectDescription()
+        {
+            WarriorWater ww = new WarriorWater();
+            Assert.Equal("It’s water. Just water.", ww.Description);
+        }
+
+        [Fact]
         public void ShouldBeAIPropChangedItem()
         {
             WarriorWater ww = new WarriorWater();

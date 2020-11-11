@@ -58,6 +58,15 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
+        /// <summary>
+        /// the type of item
+        /// </summary>
         public ItemType itemType { get { return BleakwindBuffet.Data.Enums.ItemType.Entree; } }
+
+        /// <summary>
+        /// The description of the item
+        /// </summary>
+        public abstract string Description { get; }
+
     }
 }

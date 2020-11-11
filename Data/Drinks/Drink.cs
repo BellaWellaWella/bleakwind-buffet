@@ -50,6 +50,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// </summary>
         public abstract uint Calories { get; }
 
+
         /// <summary>
         /// Special instructions to prepare the drink
         /// </summary>
@@ -80,6 +81,14 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        /// <summary>
+        /// the type of item
+        /// </summary>
         public ItemType itemType { get { return BleakwindBuffet.Data.Enums.ItemType.Drink; } }
+
+        /// <summary>
+        /// the description of the item
+        /// </summary>
+        public abstract string Description { get; }
     }
 }

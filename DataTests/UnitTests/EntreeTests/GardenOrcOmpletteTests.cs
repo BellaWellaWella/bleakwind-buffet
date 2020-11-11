@@ -15,6 +15,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
     public class GardenOrcOmeletteTests
     {
         [Fact]
+        public void ShouldHaveCorrectDescription()
+        {
+            GardenOrcOmelette go = new GardenOrcOmelette();
+            Assert.Equal("Vegetarian. Two egg omelette packed with a mix of broccoli, mushrooms, and tomatoes. Topped with cheddar cheese.", go.Description);
+        }
+
+        [Fact]
         public void ShouldBeAIPropChangedItem()
         {
             GardenOrcOmelette go = new GardenOrcOmelette();

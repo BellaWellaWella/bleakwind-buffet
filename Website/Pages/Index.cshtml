@@ -45,70 +45,80 @@
             <div>
                 Between
                 <input name="CalMin" type="number" min="0" max="1000" step="5" placeholder="min" value ="@Model.CalMin"/>
-and
+                and
                 <input name="CalMax" type="number" min="0" max="1000" step="5" placeholder="max" value="@Model.CalMax" />
             </div>
             <p />
             <h4>Price</h4>
             <div>
                 Between
-                <input name="PriceMin" type="number" min="0" max="15" step="1" placeholder="min" value="@Model.PriceMin" />
+                <input name="PriceMin" type="number" min="0" max="15" step=".1" placeholder="min" value="@Model.PriceMin" />
                 and
-                <input name="PriceMax" type="number" min="0" max="15" step="1" placeholder="max" value="@Model.PriceMax"/>
+                <input name="PriceMax" type="number" min="0" max="15" step=".1" placeholder="max" value="@Model.PriceMax"/>
             </div>
 
         </div>
 
 
         <div id="results">
-            <h2>
-                Entrees
-            </h2>
+            <div>
+                <h2>
+                    Entrees
+                </h2>
 
-            @foreach (BleakwindBuffet.Data.IOrderItem e in Model.AllItems)
-            {
-                @if (e.itemType == BleakwindBuffet.Data.Enums.ItemType.Entree)
+                @foreach (BleakwindBuffet.Data.IOrderItem e in Model.AllItems)
                 {
-                    <div class="menu-item">
-                        <h3 class="name-item">@e.Name</h3>
-                        <div class="price-item">Price: $@e.Price</div>
-                        <div class="calories-item"> Calories: @e.Calories</div>
-                        <p></p>
-                    </div>
-                }
+                    @if (e.itemType == BleakwindBuffet.Data.Enums.ItemType.Entree)
+                    {
+                        <div class="menu-item">
+                            <h3 class="name-item">@e.Name</h3>
+                            <h4 class="description-item">@e.Description</h4>
+                            <div class="price-item">Price: $@e.Price</div>
+                            <div class="calories-item"> Calories: @e.Calories</div>
+                            <p></p>
+                        </div>
+                    }
 
-            }
+                }
+            </div>
+            <div>
+                <h2 class="header">
+                    Sides
+                </h2>
+                @foreach (BleakwindBuffet.Data.IOrderItem e in Model.AllItems)
+                {
+                    @if (e.itemType == BleakwindBuffet.Data.Enums.ItemType.Side)
+                    {
+                        <div class="menu-item">
+                            <h3 class="name-item">@e.Name</h3>
+                            <h4 class="description-item">@e.Description</h4>
+                            <div class="price-item">Price: $@e.Price</div>
+                            <div class="calories-item"> Calories: @e.Calories</div>
+                            <p></p>
+                        </div>
+                    }
+                }
+            </div>
 
-            <h2 class="header">
-                Sides
-            </h2>
-            @foreach (BleakwindBuffet.Data.IOrderItem e in Model.AllItems)
-            {
-                @if (e.itemType == BleakwindBuffet.Data.Enums.ItemType.Side)
+            <div>
+                <h2 class="header">
+                    Drinks
+                </h2>
+                @foreach (BleakwindBuffet.Data.IOrderItem e in Model.AllItems)
                 {
-                    <div class="menu-item">
-                        <h3 class="name-item">@e.Name</h3>
-                        <div class="price-item">Price: $@e.Price</div>
-                        <div class="calories-item"> Calories: @e.Calories</div>
-                        <p></p>
-                    </div>
+                    @if (e.itemType == BleakwindBuffet.Data.Enums.ItemType.Drink)
+                    {
+                        <div class="menu-item">
+                            <h3 class="name-item">@e.Name</h3>
+                            <h4 class="description-item">@e.Description</h4>
+                            <div class="price-item">Price: $@e.Price</div>
+                            <div class="calories-item"> Calories: @e.Calories</div>
+                            <p></p>
+                        </div>
+                    }
                 }
-            }
-            <h2 class="header">
-                Drinks
-            </h2>
-            @foreach (BleakwindBuffet.Data.IOrderItem e in Model.AllItems)
-            {
-                @if (e.itemType == BleakwindBuffet.Data.Enums.ItemType.Drink)
-                {
-                    <div class="menu-item">
-                        <h3 class="name-item">@e.Name</h3>
-                        <div class="price-item">Price: $@e.Price</div>
-                        <div class="calories-item"> Calories: @e.Calories</div>
-                        <p></p>
-                    </div>
-                }
-            }
+            </div>
+            
         </div>
     </form>
 

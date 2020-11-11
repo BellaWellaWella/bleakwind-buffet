@@ -16,6 +16,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
     public class DragonbornWaffleFriesTests
     {
         [Fact]
+        public void ShouldHaveCorrectDescription()
+        {
+            DragonbornWaffleFries dw = new DragonbornWaffleFries();
+            Assert.Equal("Crispy fried potato waffle fries.", dw.Description);
+        }
+
+        [Fact]
         public void ShouldBeAIPropChangedItem()
         {
             DragonbornWaffleFries dw = new DragonbornWaffleFries();

@@ -195,5 +195,14 @@ namespace BleakwindBuffet.Data
             }
         }
 
+
+        /// <summary>
+        /// The description of the item
+        /// </summary>
+        public string Description
+        {
+            get { return "A combo of items with a discount!"; }
+        }
+
     }
 }

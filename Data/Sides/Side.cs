@@ -76,6 +76,14 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        /// <summary>
+        /// the type of the item
+        /// </summary>
         public ItemType itemType { get { return BleakwindBuffet.Data.Enums.ItemType.Side; } }
+
+        /// <summary>
+        /// the description of the item
+        /// </summary>
+        public abstract string Description { get; }
     }
 }

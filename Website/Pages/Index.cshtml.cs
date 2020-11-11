@@ -77,19 +77,83 @@ namespace Website.Pages
         /// </summary>
         public void OnGet(int? calMin, int? calMax, double? priceMin, double? priceMax)
         {
-            SearchTerms = Request.Query["SearchTerms"];
-            AllItems = Menu.Search(SearchTerms);
-
-            ItemCategory = Request.Query["ItemCategory"];
-            AllItems = Menu.FilterByCategory(AllItems, ItemCategory);
 
             CalMin = calMin;
             CalMax = calMax;
             PriceMin = priceMin;
             PriceMax = priceMax;
 
-            AllItems = Menu.FilterByCalories(AllItems, CalMin, CalMax);
-            AllItems = Menu.FilterByPrice(AllItems, PriceMin, PriceMax);
+            SearchTerms = Request.Query["SearchTerms"];
+            ItemCategory = Request.Query["ItemCategory"];
+            AllItems = Menu.All;
+
+            if (SearchTerms != null)
+            {
+
+                AllItems = AllItems.Where(item =>
+                {
+                    string[] words = SearchTerms.Split(' ');
+                    var things = new List<IOrderItem>();
+                    //bool t = false;
+                    foreach (var word in words)
+                    {
+                        if (item.Description.Contains(word, StringComparison.InvariantCultureIgnoreCase) || item.Name.Contains(word, StringComparison.InvariantCultureIgnoreCase))
+                        {
+                            return true; ;
+                        }
+                        
+                    }
+                    return false;
+                });
+            }
+
+               
+
+            //AllItems = Menu.FilterByCategory(AllItems, ItemCategory);
+            if (ItemCategory != null && ItemCategory.Length != 0)
+            {
+                AllItems = AllItems.Where(item => ItemCategory.Contains(item.itemType.ToString()));
+            }
+
+            if (CalMax != null || CalMin != null)
+            {
+                if (CalMin != null && CalMin != null)
+                {
+                    AllItems = AllItems.Where(item =>item.Calories <= CalMax).Where(item => item.Calories >= CalMin);
+                }
+                else if (CalMin != null)
+                {
+                    AllItems = AllItems.Where(item => item.Calories >= CalMin);
+                }
+                else
+                {
+                    AllItems = AllItems.Where(item =>item.Calories <= CalMax);
+                }
+
+            }
+
+            if (PriceMax != null || PriceMax != null)
+            {
+                if (PriceMax != null && PriceMin != null)
+                {
+                    AllItems = AllItems.Where(item => item.Price <= PriceMax).Where(item => item.Price >= PriceMin);
+                }
+                else if (CalMin != null)
+                {
+                    AllItems = AllItems.Where(item => item.Price >= PriceMin);
+                }
+                else
+                {
+                    AllItems = AllItems.Where(item => item.Price <= priceMax);
+                }
+
+            }
+
+
+            //AllItems = Menu.FilterByCalories(AllItems, CalMin, CalMax);
+            //AllItems = Menu.FilterByPrice(AllItems, PriceMin, PriceMax);
+
+
         }
     }
 }

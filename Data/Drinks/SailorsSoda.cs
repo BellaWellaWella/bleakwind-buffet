@@ -141,5 +141,14 @@ namespace BleakwindBuffet.Data.Drinks
             return (Size.ToString() + " "+ Flavor.ToString() + " Sailor Soda");
         }
 
+
+        /// <summary>
+        /// The description of the item
+        /// </summary>
+        public override string Description
+        {
+            get { return "An old-fashioned jerked soda, carbonated water and flavored syrup poured over a bed of crushed ice."; }
+        }
+
     }
 }
